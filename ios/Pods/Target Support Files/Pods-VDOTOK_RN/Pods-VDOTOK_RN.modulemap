@@ -1,0 +1,6 @@
+module Pods_VDOTOK_RN {
+  umbrella header "Pods-VDOTOK_RN-umbrella.h"
+
+  export *
+  module * { export * }
+}

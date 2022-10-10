@@ -1,0 +1,6 @@
+module Pods_VDOTOK_RN_VDOTOK_RNTests {
+  umbrella header "Pods-VDOTOK_RN-VDOTOK_RNTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
