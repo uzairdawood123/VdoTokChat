@@ -94,8 +94,6 @@ class Login extends React.Component {
     const {nameError, passwordError, otherError} = this.state;
     return (
       <Container
-        lottie
-        backgroundImage={bg}
         backgroundImageStyle={styles.containerBack}
         style={{flex: 1}}>
         <ScrollView contentContainerStyle={styles.scrollView}>
@@ -224,13 +222,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  containerBack: {
-    width: wp('100%'),
-    height: 300,
-    top: undefined,
-    tintColor: Colors.PrimaryLight,
-    opacity: 0.6,
-  },
+
   errorText: {
     fontSize: 3.2,
     color: 'red',

@@ -9,23 +9,23 @@
 9        android:targetSdkVersion="30" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/debug/AndroidManifest.xml:5:5-77
-11-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/debug/AndroidManifest.xml:5:22-75
+11-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/debug/AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:6:5-67
-12-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:6:22-64
+12-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:6:5-67
+12-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:6:22-64
 13
 14    <queries>
-14-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:29:6-35:12
+14-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:29:6-35:12
 15        <intent>
-15-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:30:3-34:12
+15-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:30:3-34:12
 16            <action android:name="android.intent.action.VIEW" />
-16-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:31:6-58
-16-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:31:14-55
+16-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:31:6-58
+16-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:31:14-55
 17            <!-- If you don't know the MIME type in advance, set "mimeType" to "*/*". -->
 18            <data android:mimeType="*/*" />
-18-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:33:6-37
-18-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:33:12-34
+18-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:33:6-37
+18-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:33:12-34
 19        </intent>
 20    </queries>
 21
@@ -33,88 +33,88 @@
 22-->[com.facebook.flipper:flipper:0.99.0] /Users/uzairist/.gradle/caches/transforms-3/2f5725507f1929c6ddf8255f0bef77bd/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:5-76
 22-->[com.facebook.flipper:flipper:0.99.0] /Users/uzairist/.gradle/caches/transforms-3/2f5725507f1929c6ddf8255f0bef77bd/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:22-73
 23    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-23-->[:react-native-fs] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
-23-->[:react-native-fs] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
+23-->[:react-native-fs] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+23-->[:react-native-fs] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
 24
 25    <application
-25-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:8:5-28:19
+25-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:8:5-28:19
 26        android:name="com.vdotok_rn.MainApplication"
-26-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:11:7-38
+26-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:11:7-38
 27        android:allowBackup="false"
-27-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:15:7-34
+27-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:15:7-34
 28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 28-->[androidx.core:core:1.5.0] /Users/uzairist/.gradle/caches/transforms-3/5646db46e2cfb43e7b3d42f3054c498c/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
 29        android:debuggable="true"
 30        android:icon="@mipmap/ic_launcher"
-30-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:13:7-41
+30-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:13:7-41
 31        android:label="@string/app_name"
-31-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:12:7-39
+31-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:12:7-39
 32        android:roundIcon="@mipmap/ic_launcher_round"
-32-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:14:7-52
+32-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:14:7-52
 33        android:theme="@style/AppTheme"
-33-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:16:7-38
+33-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:16:7-38
 34        android:usesCleartextTraffic="true" >
-34-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:9:5-40
+34-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:9:5-40
 35        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-35-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/debug/AndroidManifest.xml:11:9-86
-35-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/debug/AndroidManifest.xml:11:19-83
+35-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/debug/AndroidManifest.xml:11:9-86
+35-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/debug/AndroidManifest.xml:11:19-83
 36        <activity
-36-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:17:7-27:18
+36-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:17:7-27:18
 37            android:name="com.vdotok_rn.MainActivity"
-37-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:18:9-37
+37-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:18:9-37
 38            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-38-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:20:9-86
+38-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:20:9-86
 39            android:label="@string/app_name"
-39-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:19:9-41
+39-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:19:9-41
 40            android:launchMode="singleTask"
-40-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:21:9-40
+40-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:21:9-40
 41            android:windowSoftInputMode="adjustResize" >
-41-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:22:9-51
+41-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:22:9-51
 42            <intent-filter>
-42-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:23:9-26:25
+42-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:23:9-26:25
 43                <action android:name="android.intent.action.MAIN" />
-43-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:24:13-65
-43-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:24:21-62
+43-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:24:13-65
+43-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:24:21-62
 44
 45                <category android:name="android.intent.category.LAUNCHER" />
-45-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:25:13-73
-45-->/Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/android/app/src/main/AndroidManifest.xml:25:23-70
+45-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:25:13-73
+45-->/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:25:23-70
 46            </intent-filter>
 47        </activity>
 48
 49        <provider
-49-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+49-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
 50            android:name="com.vinzscam.reactnativefileviewer.FileProvider"
-50-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-75
+50-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-75
 51            android:authorities="com.vdotok_rn.provider"
-51-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-60
+51-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-60
 52            android:exported="false"
-52-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+52-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
 53            android:grantUriPermissions="true" >
-53-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+53-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
 54            <meta-data
-54-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
+54-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
 55                android:name="android.support.FILE_PROVIDER_PATHS"
-55-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+55-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 56                android:resource="@xml/file_viewer_provider_paths" />
-56-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
+56-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
 57        </provider>
 58        <provider
-58-->[:react-native-image-picker] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+58-->[:react-native-image-picker] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
 59            android:name="com.imagepicker.ImagePickerProvider"
-59-->[:react-native-image-picker] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
+59-->[:react-native-image-picker] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
 60            android:authorities="com.vdotok_rn.imagepickerprovider"
-60-->[:react-native-image-picker] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-71
+60-->[:react-native-image-picker] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-71
 61            android:exported="false"
-61-->[:react-native-image-picker] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+61-->[:react-native-image-picker] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
 62            android:grantUriPermissions="true" >
-62-->[:react-native-image-picker] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+62-->[:react-native-image-picker] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
 63            <meta-data
-63-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
+63-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
 64                android:name="android.support.FILE_PROVIDER_PATHS"
-64-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+64-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 65                android:resource="@xml/imagepicker_provider_paths" />
-65-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VDOTOK_CHAT_RN/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
+65-->[:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
 66        </provider>
 67    </application>
 68

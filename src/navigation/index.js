@@ -98,8 +98,8 @@ class Navigation extends Component {
           headerMode={'none'}>
           {!this.props.user ? (
             <>
-              <Stack.Screen name="GetStarted" component={GetStarted} />
-              <Stack.Screen name="Walkthrough" component={Walkthrough} />
+              {/*<Stack.Screen name="GetStarted" component={GetStarted} />*/}
+              {/*<Stack.Screen name="Walkthrough" component={Walkthrough} />*/}
               <Stack.Screen name="Login" component={Login} />
               <Stack.Screen name="Signup" component={Signup} />
             </>
