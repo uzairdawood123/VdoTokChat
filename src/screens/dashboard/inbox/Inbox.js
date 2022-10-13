@@ -148,6 +148,10 @@ closeAllOpenRows() {
     this.deleteChat(group)
     }
   };
+  createChat = () => {
+    this.setState({createChatModal: true});
+
+  };
 
   deleteChat = (group) => {
     this.setState({ loadingModal: true });
@@ -976,24 +980,42 @@ closeAllOpenRows() {
                   </View>
                 ) : (
                   <>
-                    <View style={{height: 200, width: 300}}>
+                    <View style={{height: 200, width: 300,alignItems: 'center',
+                      justifyContent: 'center' }}>
                       <Image
                         source={require('../../../assets/images/Shipping.png')}
                       />
                     </View>
                     <ResponsiveText
-                      style={{opacity: 0.7, color: Colors.Primary}}>
+                        style={{ fontSize: 6,color: Colors.headerText, alignItems: 'center',
+                          justifyContent: 'center'}}>
+                      No Conversation Yet
+                    </ResponsiveText>
+                    <ResponsiveText
+                      style={{opacity: 0.7, color: Colors.dashboardText, alignItems: 'center',
+                        justifyContent: 'center'}}>
                       Tap and hold on any message to star it, so you can easily find it later
                     </ResponsiveText>
-                    <ResponsiveText
-                      style={{opacity: 0.7, color: Colors.Primary}}>
-                      Please Start one!
-                    </ResponsiveText>
-                    <ResponsiveText
-                      style={{opacity: 0.7, color: Colors.Primary}}>
-                      or pull to refresh
+                    <Button
+                        text={'New Chat'}
+                        containerStyle={{width: wp('40'),
+                          height: wp('12'),
+                          marginTop: wp('10'),
+                          backgroundColor:Colors.dashboardButton }}
+                        textStyle={styles.LoginbuttonText}
+                        onPress={
+                          this.createChat
 
-                    </ResponsiveText>
+                      // this.createChat()
+                        }
+
+                          //  this.props.navigation.navigate('GetReady')
+                    />
+                    {/*<ResponsiveText*/}
+                    {/*  style={{opacity: 0.7, color: Colors.Primary}}>*/}
+                    {/*  or pull to refresh*/}
+
+                    {/*</ResponsiveText>*/}
 
 
                   </>

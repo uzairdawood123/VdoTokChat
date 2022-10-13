@@ -6,8 +6,10 @@ import {
   ActivityIndicator,
   TouchableOpacity,
   Linking,
+    SafeAreaView,
   Modal,
-  Dimensions
+  Dimensions,
+    Platform
 } from 'react-native';
 import RNFS from 'react-native-fs';
 import Video from 'react-native-video';
@@ -22,6 +24,7 @@ import {Colors} from '../themes/Colors';
 import {connect} from 'react-redux';
 import VideoPlayer from 'react-native-video-player';
 import FileViewer from "react-native-file-viewer";
+
 
 const MessageBubble = props => {
   const {currentmsgs, item, key, index, sending} = props;
@@ -125,11 +128,12 @@ const MessageBubble = props => {
                                   paddingStart: 10,
                                   paddingEnd: 10,
                                   backgroundColor: Colors.editText,
-                                  justifyContent: 'center',}}>
+                                  justifyContent: 'center',
+                              alignItems: 'center'}}>
 
                               {item.loading ? (
                                       <>
-                                          <View style={{position:'absolute',zIndex:2,padding:5,backgroundColor: Colors.white,borderRadius:10}}>
+                                          <View style={{position:'absolute',zIndex:2,padding:10,backgroundColor:'rgba(255,255,255,0.9)',borderRadius:10}}>
                                               <Spinner
                                                   isVisible={true}
                                                   size={35}
@@ -160,12 +164,16 @@ const MessageBubble = props => {
                           {item.type === 'video' && (
                               <View
                                   style={{
-                                      // width: 200,
-                                      // height: 120,
-                                      // borderRadius: 40,
-                                      backgroundColor: "black",
-                                      alignItems: 'center',
+                                      width: 200,
+                                      height: 150,
+                                      borderRadius: 10,
+                                      paddingTop: 20,
+                                      paddingBottom: 20,
+                                      paddingStart: 20,
+                                      paddingEnd: 20,
+                                      backgroundColor: Colors.editText,
                                       justifyContent: 'center',
+                                      alignItems: 'center',
                                   }}
                                   >
                                   {item.loading ? (
@@ -175,7 +183,7 @@ const MessageBubble = props => {
                                               isVisible={true}
                                               size={35}
                                               type={'circle'}
-                                              color={Colors.white}
+                                              color={Colors.black}
                                           />
                                           <ResponsiveText style={{marginTop: 10}}>
                                               Video
@@ -184,8 +192,10 @@ const MessageBubble = props => {
                                   ) : (
                                       <>
                                           <VideoPlayer
+                                              style={{borderRadius: 10, width:200, height: 150, justifyContent: 'center',
+                                                  alignItems: 'center'}}
                                               video={{
-                                                  uri:props.item.from !== props.user.ref_id?`file://${RNFS.DownloadDirectoryPath}/${item.content}.${item.ext}`:props.filesObject[props.item.id],
+                                                  uri:props.item.from !== props.user.ref_id?`file://${Platform.OS === 'android'?RNFS.DownloadDirectoryPath:RNFS.DocumentDirectoryPath}/${item.content}.${item.ext}`:props.filesObject[props.item.id],
                                               }}
                                               // videoWidth={200}
                                               // videoHeight={200}
@@ -200,8 +210,9 @@ const MessageBubble = props => {
                           {item.type === 'audio' && (
                               <View
                                   style={{
-                                      height: 40,
-                                      width: 250,
+                                      height: 50,
+                                      width: 200,
+                                      backgroundColor: Colors.editText,
                                       alignItems: 'center',
                                       justifyContent: 'center',
                                   }}>
@@ -210,8 +221,8 @@ const MessageBubble = props => {
                                           <Spinner
                                               isVisible={true}
                                               size={20}
-                                              type={'Wave'}
-                                              color={Colors.Primary}
+                                              type={'circle'}
+                                              color={Colors.black}
                                           />
                                           <ResponsiveText style={{marginTop: 5}}>
                                               Audio
@@ -241,14 +252,20 @@ const MessageBubble = props => {
                               </View>
                           )}
                           {item.type === 'file' && (
-                              <View style={{alignItems:'center',justifyContent:"center",paddingHorizontal:15}}>
+                              <View  style={{
+                                  height: 80,
+                                  width: 80,
+                                  backgroundColor: Colors.editText,
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                              }}>
                                   {item.loading ? (
                                       <View style={{padding:10}}>
                                           <Spinner
                                               isVisible={true}
                                               size={35}
-                                              type={'Wave'}
-                                              color={Colors.Primary}
+                                              type={'circle'}
+                                              color={Colors.black}
                                           />
                                       </View>
 
@@ -336,6 +353,7 @@ const MessageBubble = props => {
               setImageModal(false);
               setSelectedImage(null);
             }}>
+            <SafeAreaView>
             <View style={styles.imageViewerContainer}>
               <ActivityIndicator
                 style={{
@@ -383,6 +401,7 @@ const MessageBubble = props => {
                 />
               </ImageZoom>
             </View>
+            </SafeAreaView>
           </Modal>
     </View>
   );

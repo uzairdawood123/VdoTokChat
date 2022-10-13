@@ -8,5 +8,7 @@ export const Colors={
     inputBorder:'#C1D7D3',
     editText:'#F0F5F4',
     chatBackround:'#E5E5E5',
-    groupCardText:'#8F9090'
+    groupCardText:'#8F9090',
+    dashboardText:'#D1CDDD',
+    dashboardButton:'#190354'
 }

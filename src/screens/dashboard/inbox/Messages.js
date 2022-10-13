@@ -217,6 +217,8 @@ class Messages extends React.Component {
                 source={require('../../../assets/icons/arrow-left.png')}
                 // style={styles.HeaderleftIcon}
               />
+              <View>
+
               <ResponsiveText style={styles.headertitle}>
                 {this.props.currentChannel.auto_created == 0
                     ? this.props.currentChannel.group_title
@@ -226,27 +228,47 @@ class Messages extends React.Component {
                             .find(e => e !== this.props.user.username)
                         : this.props.currentChannel.group_title}
               </ResponsiveText>
+                {
+                  typingchannel.length > 0 ? (
+                      <ResponsiveText style={{color: '#00AF59',     marginStart: 15,
+                      }}>
+                        {typingchannel.length == 1
+                            ? `${
+                                this.props.allUsers.find(
+                                    e => e.ref_id == typingchannel[0],
+                                ).username
+                            } is Typing...`
+                            : `${
+                                this.props.allUsers.find(
+                                    e => e.ref_id == typingchannel[0],
+                                ).username
+                            } and ${typingchannel.length - 1} others are Typing...`}
+                      </ResponsiveText>
+                  ) : null
+                }
+              </View>
+
 
             </View>
           }
           leftPress={() => this.props.navigation.goBack()}
-          typing={
-            typingchannel.length > 0 ? (
-              <ResponsiveText style={{color: '#00AF59'}}>
-                {typingchannel.length == 1
-                  ? `${
-                      this.props.allUsers.find(
-                        e => e.ref_id == typingchannel[0],
-                      ).username
-                    } is Typing...`
-                  : `${
-                      this.props.allUsers.find(
-                        e => e.ref_id == typingchannel[0],
-                      ).username
-                    } and ${typingchannel.length - 1} others are Typing...`}
-              </ResponsiveText>
-            ) : null
-          }
+          // typing={
+          //   typingchannel.length > 0 ? (
+          //     <ResponsiveText style={{color: '#00AF59'}}>
+          //       {typingchannel.length == 1
+          //         ? `${
+          //             this.props.allUsers.find(
+          //               e => e.ref_id == typingchannel[0],
+          //             ).username
+          //           } is Typing...`
+          //         : `${
+          //             this.props.allUsers.find(
+          //               e => e.ref_id == typingchannel[0],
+          //             ).username
+          //           } and ${typingchannel.length - 1} others are Typing...`}
+          //     </ResponsiveText>
+          //   ) : null
+          // }
           // body={
             // <ResponsiveText style={styles.headertitle}>
             //   {this.props.currentChannel.auto_created == 0
