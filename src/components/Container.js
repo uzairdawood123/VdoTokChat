@@ -59,7 +59,7 @@ export default Container;
 const styles = {
   container: {
     flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: Colors.white
   },
   backgroundImage: {
     position: 'absolute',

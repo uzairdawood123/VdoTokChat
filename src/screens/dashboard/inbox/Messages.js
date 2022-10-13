@@ -15,6 +15,7 @@ import Fonts from '../../../themes/Fonts';
 import InputField from '../../../components/InputField';
 import {messages} from '../../../components/DummyData';
 import MessageBubble from '../../../components/MessageBubble';
+import KeyboardSpacer from "react-native-keyboard-spacer";
 // import ImagePicker from 'react-native-image-picker';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import RNFS from 'react-native-fs';
@@ -45,6 +46,7 @@ class Messages extends React.Component {
       chat: messages,
       text: '',
       payload: null,
+      platform: false
     };
   }
 
@@ -133,12 +135,17 @@ class Messages extends React.Component {
     if (this.state.text.trim().length === 0) {
       //console.log("cannot send empty message==>");
     } else if (this.state.text.trim().length > 400) {
+      if (Platform.OS === 'android') {
+        ToastAndroid.showWithGravity(
+            'cannot send msg with characters greater then 400!',
+            ToastAndroid.LONG,
+            ToastAndroid.CENTER,
+        );
+      } else {
+      }
+
       //console.log("message cannot be greater then 400 characters==>");
-      ToastAndroid.showWithGravity(
-        'cannot send msg with characters greater then 400!',
-        ToastAndroid.LONG,
-        ToastAndroid.CENTER,
-      );
+
 
     } else {
       let idd = new Date().getTime().toString();
@@ -175,6 +182,11 @@ class Messages extends React.Component {
     }
   };
   componentDidMount(){
+    if (Platform.OS === 'ios') {
+      this.setState({platform: true});
+    } else {
+      this.setState({platform: false});
+    }
 
   }
 
@@ -195,16 +207,26 @@ class Messages extends React.Component {
 
     //console.log('client-->', Client);
     return (
-      <Container style={{flex: 1}}>
+      <Container style={{flex: 1,}}>
         <AppHeader
           titleLeftAlign
           containerStyle={styles.header}
           left={
             <View style={styles.leftIconContainer}>
               <Image
-                source={require('../../../assets/icons/left_chevron2.png')}
-                style={styles.HeaderleftIcon}
+                source={require('../../../assets/icons/arrow-left.png')}
+                // style={styles.HeaderleftIcon}
               />
+              <ResponsiveText style={styles.headertitle}>
+                {this.props.currentChannel.auto_created == 0
+                    ? this.props.currentChannel.group_title
+                    : this.props.currentChannel.group_title.includes('-')
+                        ? this.props.currentChannel.group_title
+                            .split('-')
+                            .find(e => e !== this.props.user.username)
+                        : this.props.currentChannel.group_title}
+              </ResponsiveText>
+
             </View>
           }
           leftPress={() => this.props.navigation.goBack()}
@@ -225,32 +247,32 @@ class Messages extends React.Component {
               </ResponsiveText>
             ) : null
           }
-          body={
-            <ResponsiveText style={styles.headertitle}>
-              {this.props.currentChannel.auto_created == 0
-                ? this.props.currentChannel.group_title
-                : this.props.currentChannel.group_title.includes('-')
-                ? this.props.currentChannel.group_title
-                    .split('-')
-                    .find(e => e !== this.props.user.username)
-                : this.props.currentChannel.group_title}
-            </ResponsiveText>
-          }
-          right={
-            this.props.currentChannel.auto_created == 0 ? (
-              <ResponsiveText style={{color: 'green'}}>
-                {length + 1}/{this.props.currentChannel.participants.length}
-              </ResponsiveText>
-            ) : (
-              <ResponsiveText
-                style={{
-                  color: length > 0 ? 'green' : 'grey',
-                  opacity: length > 0 ? 1 : 0.5,
-                }}>
-                {length > 0 ? 'Online' : 'offline'}
-              </ResponsiveText>
-            )
-          }
+          // body={
+            // <ResponsiveText style={styles.headertitle}>
+            //   {this.props.currentChannel.auto_created == 0
+            //     ? this.props.currentChannel.group_title
+            //     : this.props.currentChannel.group_title.includes('-')
+            //     ? this.props.currentChannel.group_title
+            //         .split('-')
+            //         .find(e => e !== this.props.user.username)
+            //     : this.props.currentChannel.group_title}
+            // </ResponsiveText>
+          // }
+          // right={
+          //   this.props.currentChannel.auto_created == 0 ? (
+          //     <ResponsiveText style={{color: 'green'}}>
+          //       {length + 1}/{this.props.currentChannel.participants.length}
+          //     </ResponsiveText>
+          //   ) : (
+          //     <ResponsiveText
+          //       style={{
+          //         color: length > 0 ? 'green' : 'grey',
+          //         opacity: length > 0 ? 1 : 0.5,
+          //       }}>
+          //       {length > 0 ? 'Online' : 'offline'}
+          //     </ResponsiveText>
+          //   )
+          // }
         />
         <View style={styles.clearFix} />
         <FlatList
@@ -293,7 +315,7 @@ class Messages extends React.Component {
                     <ResponsiveText
                       style={{
                         opacity: 0.7,
-                        color: Colors.Primary,
+                        color: "black",
                         fontSize: 6,
                       }}>
                       No Messages Yet
@@ -301,7 +323,7 @@ class Messages extends React.Component {
                     <ResponsiveText
                       style={{
                         opacity: 0.7,
-                        color: Colors.Primary,
+                        color: "black",
                         marginTop: 10,
                       }}>
                       Send message to start conversation.
@@ -315,14 +337,13 @@ class Messages extends React.Component {
         {payload && (
           <View
             style={{
-              backgroundColor: 'transparent',
-              position: 'absolute',
+              backgroundColor: 'black',
               bottom: 80,
             }}>
-            <View style={{height: 60, width: 60, marginLeft: 20}}>
+            <View style={{height: 60, width: 120, marginLeft: 20}}>
               <Image
                 source={{uri: this.state.payload.uri}}
-                style={{height: 60, width: 60, borderRadius: 5}}
+                style={{height: 60, width: 120, borderRadius: 5}}
               />
               <TouchableOpacity
                 onPress={() => this.setState({payload: null})}
@@ -343,14 +364,15 @@ class Messages extends React.Component {
             }}
             onBlur={this._onBlur}
             CameraIcon={true}
-            placeholder={'Write your message here ...'}
+            placeholder={'Type your message'}
+            placeholderTextColor="#C1D7D3"
             inputField={{fontSize: wp('3.3')}}
             containerStyle={styles.SendInput}
             value={this.state.text}
             right={
               <View style={styles.sendButton}>
                 <Image
-                  source={require('../../../assets/icons/send.png')}
+                  source={require('../../../assets/icons/SendButto.png')}
                   style={styles.sendIcon}
                 />
               </View>
@@ -382,7 +404,16 @@ class Messages extends React.Component {
             }, 3000);
           }}
           />
+          {/*<View style = {{ flex: 1,*/}
+          {/*  alignItems: 'flex-end'}}>*/}
+          {/*  <Image*/}
+          {/*      source={require('../../../assets/icons/SendButto.png')}*/}
+          {/*  />*/}
+          {/*</View>*/}
         </View>
+        {this.state.platform ? (
+            <KeyboardSpacer/>
+        ) : (null)}
       </Container>
     );
   }
@@ -424,7 +455,9 @@ const styles = {
     backgroundColor: Colors.PrimaryLight,
   },
   leftIconContainer: {
-    padding: 7,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   },
   HeaderleftIcon: {
     height: wp('3.5'),
@@ -443,32 +476,33 @@ const styles = {
     resizeMode: 'contain',
   },
   headertitle: {
+    marginStart: 15,
+    width: wp('100'),
     // fontFamily: Fonts.OpenSansRegular,
     fontSize: 5.5,
   },
   clearFix: {
     height: wp('0.4'),
-    backgroundColor: '#E1E1E1',
+    backgroundColor: Colors.white,
     // marginBottom:wp('4')
   },
   sendInputContainer: {
-    height: wp('20'),
+    height: wp('10'),
     width: wp('100'),
     // position: 'absolute',
     bottom: 0,
     // backgroundColor: 'green',
     borderTopWidth: wp('0.3'),
-    borderTopColor: '#D3D3D3',
+    borderTopColor: Colors.white,
     justifyContent: 'center',
     alignItems: 'center',
     // paddingRight:0
   },
   SendInput: {
-    width: wp('91'),
-    backgroundColor: '#F2F2F2',
+    width: wp('100'),
+    backgroundColor: Colors.white,
     paddingLeft: wp('4'),
     borderWidth: 0,
-    borderRadius: wp('10'),
     height: wp('13'),
     paddingRight: 2,
 
@@ -478,17 +512,17 @@ const styles = {
     height: wp('10'),
     width: wp('10'),
     borderRadius: wp('10'),
-    backgroundColor: Colors.Primary,
+    backgroundColor: Colors.white,
     justifyContent: 'center',
     alignItems: 'center',
   },
   sendIcon: {
     height: wp('5.5'),
     width: wp('5.5'),
-    tintColor: 'white',
     resizeMode: 'contain',
   },
   contentContainer: {
+    backgroundColor: Colors.chatBackround,
     flexGrow: 1,
     // justifyContent: 'flex-end',
     paddingVertical: wp('2.2'),

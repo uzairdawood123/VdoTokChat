@@ -109,122 +109,227 @@ class Signup extends React.Component {
     const {nameError, passwordError, otherError,emailError} = this.state;
     return (
       <Container
-        lottie
-        backgroundImage={bg}
-        backgroundImageStyle={styles.containerBack}
-        style={{flex: 1}}>
+        // lottie
+        // backgroundImage={bg}
+        // backgroundImageStyle={styles.containerBack}
+        style={{flex: 1,backgroundColor: Colors.backgroundColor}}>
         <ScrollView contentContainerStyle={styles.scrollView}>
           <View style={styles.topContainer}>
             <Image
               source={require('../../assets/images/full_Logo.png')}
               style={styles.logo}
             />
+          </View>
 
-            <ResponsiveText style={styles.loginText}>Sign Up</ResponsiveText>
-            <InputField
-              //   autoFocus
-              placeholder={'Enter Email'}
-              value={this.state.email}
-              containerStyle={[
-                styles.usernameInpt,
-                {backgroundColor: emailError ? 'rgba(255, 0, 0,0.15)' : 'white'},
-              ]}
-              keyboardType={'email-address'}
-              onChangeText={e => this.setState({email: e, emailError: ''})}
-            />
-            <ResponsiveText style={styles.errorText}>
-              {emailError}
-            </ResponsiveText>
-            <InputField
-              //   autoFocus
-              placeholder={'Enter Username'}
-              value={this.state.userName}
-              containerStyle={[
-                styles.usernameInpt,
-                {backgroundColor: nameError ? 'rgba(255, 0, 0,0.15)' : 'white'},
-              ]}
-              keyboardType={'email-address'}
-              onChangeText={e => this.setState({userName: e, nameError: ''})}
-            />
-            <ResponsiveText style={styles.errorText}>
-              {nameError}
-            </ResponsiveText>
-            <InputField
-              placeholder={'Enter Password'}
-              containerStyle={[
-                styles.passwordInput,
-                {
-                  backgroundColor: passwordError
-                    ? 'rgba(255, 0, 0,0.15)'
-                    : 'white',
-                },
-              ]}
-              onChangeText={e =>
-                this.setState({password: e, passwordError: ''})
-              }
-              value={this.state.password}
-              secureTextEntry={this.state.isPasswordVisible ? false : true}
-              right={
-                <Image
-                  source={require('../../assets/icons/eye.png')}
-                  style={[
-                    styles.eye,
+            <View style={styles.cardBackground}>
+              <ResponsiveText style={styles.loginText}>Sign Up to your account</ResponsiveText>
+              <InputField
+                  //   autoFocus
+                  placeholder={'Enter Email'}
+                  placeholderTextColor="#C1D7D3"
+                  value={this.state.email}
+                  containerStyle={[
+                    styles.usernameInpt,
+                    {backgroundColor: emailError ? 'rgba(255, 0, 0,0.15)' : 'white'},
+                  ]}
+                  keyboardType={'email-address'}
+                  onChangeText={e => this.setState({email: e, emailError: ''})}
+              />
+              <ResponsiveText style={styles.errorText}>
+                {emailError}
+              </ResponsiveText>
+              <InputField
+                  //   autoFocus
+                  placeholder={'Enter Username'}
+                  placeholderTextColor="#C1D7D3"
+                  value={this.state.userName}
+                  containerStyle={[
+                    styles.usernameInpt,
+                    {backgroundColor: nameError ? 'rgba(255, 0, 0,0.15)' : 'white'},
+                  ]}
+                  keyboardType={'email-address'}
+                  onChangeText={e => this.setState({userName: e, nameError: ''})}
+              />
+              <ResponsiveText style={styles.errorText}>
+                {nameError}
+              </ResponsiveText>
+              <InputField
+                  placeholder={'Enter Password'}
+                  placeholderTextColor="#C1D7D3"
+                  containerStyle={[
+                    styles.passwordInput,
                     {
-                      tintColor: this.state.isPasswordVisible
-                        ? Colors.Primary
-                        : 'grey',
+                      backgroundColor: passwordError
+                          ? 'rgba(255, 0, 0,0.15)'
+                          : 'white',
                     },
                   ]}
-                />
-              }
-              rightPress={() =>
-                this.setState(prev => ({
-                  isPasswordVisible: !prev.isPasswordVisible,
-                }))
-              }
-            />
-            <ResponsiveText style={styles.errorText}>
-              {passwordError}
-            </ResponsiveText>
+                  onChangeText={e =>
+                      this.setState({password: e, passwordError: ''})
+                  }
+                  value={this.state.password}
+                  secureTextEntry={this.state.isPasswordVisible ? false : true}
+                  right={
+                    <Image
+                        source={require('../../assets/icons/eye.png')}
+                        style={[
+                          styles.eye,
+                          {
+                            tintColor: this.state.isPasswordVisible
+                                ? Colors.Primary
+                                : 'grey',
+                          },
+                        ]}
+                    />
+                  }
+                  rightPress={() =>
+                      this.setState(prev => ({
+                        isPasswordVisible: !prev.isPasswordVisible,
+                      }))
+                  }
+              />
+              <ResponsiveText style={styles.errorText}>
+                {passwordError}
+              </ResponsiveText>
 
-            <Button
-              loading={this.state.loading}
-              text={'Signup'}
-              containerStyle={styles.Loginbutton}
-              textStyle={styles.LoginbuttonText}
-              onPress={
-                () => this.Signup()
-                //  this.props.navigation.navigate('GetReady')
-              }
-            />
-            <ResponsiveText style={styles.errorText}>
-              {otherError}
-            </ResponsiveText>
-          </View>
-          <TouchableOpacity
-            disabled={this.state.loading}
-            onPress={() => this.props.navigation.navigate('Login')}
-            style={{
-              flexDirection: 'row',
-              paddingBottom: wp('5'),
-            }}>
-            <Text
-              style={{
-                textDecorationLine: 'underline',
-                // fontFamily: Fonts.RobotoRegular,
-                color: '#7E7E7E',
-              }}>
-              Already have an account?{' '}
-            </Text>
-            <Text
-              style={{
-                color: Colors.Primary,
-                textDecorationLine: 'underline',
-                // fontFamily: Fonts.RobotoRegular,
-              }}>
-              Log In
-            </Text>
-          </TouchableOpacity>
+              <Button
+                  loading={this.state.loading}
+                  text={'Signup'}
+                  containerStyle={styles.Loginbutton}
+                  textStyle={styles.LoginbuttonText}
+                  onPress={
+                    () => this.Signup()
+                    //  this.props.navigation.navigate('GetReady')
+                  }
+              />
+              <ResponsiveText style={styles.errorText}>
+                {otherError}
+              </ResponsiveText>
+
+
+              <TouchableOpacity
+                  disabled={this.state.loading}
+                  onPress={() => this.props.navigation.navigate('Login')}
+                  style={{
+                    flexDirection: 'row',
+                    paddingBottom: wp('10'),
+
+                  }}>
+                <Text
+                    style={{
+                      color: "black",
+                      // fontFamily: Fonts.RobotoRegular,
+                    }}>
+                  Log In
+                </Text>
+              </TouchableOpacity>
+
+            </View>
+            {/*<ResponsiveText style={styles.loginText}>Sign Up</ResponsiveText>*/}
+            {/*<InputField*/}
+            {/*  //   autoFocus*/}
+            {/*  placeholder={'Enter Email'}*/}
+            {/*  value={this.state.email}*/}
+            {/*  containerStyle={[*/}
+            {/*    styles.usernameInpt,*/}
+            {/*    {backgroundColor: emailError ? 'rgba(255, 0, 0,0.15)' : 'white'},*/}
+            {/*  ]}*/}
+            {/*  keyboardType={'email-address'}*/}
+            {/*  onChangeText={e => this.setState({email: e, emailError: ''})}*/}
+            {/*/>*/}
+            {/*<ResponsiveText style={styles.errorText}>*/}
+            {/*  {emailError}*/}
+            {/*</ResponsiveText>*/}
+            {/*<InputField*/}
+            {/*  //   autoFocus*/}
+            {/*  placeholder={'Enter Username'}*/}
+            {/*  value={this.state.userName}*/}
+            {/*  containerStyle={[*/}
+            {/*    styles.usernameInpt,*/}
+            {/*    {backgroundColor: nameError ? 'rgba(255, 0, 0,0.15)' : 'white'},*/}
+            {/*  ]}*/}
+            {/*  keyboardType={'email-address'}*/}
+            {/*  onChangeText={e => this.setState({userName: e, nameError: ''})}*/}
+            {/*/>*/}
+            {/*<ResponsiveText style={styles.errorText}>*/}
+            {/*  {nameError}*/}
+            {/*</ResponsiveText>*/}
+            {/*<InputField*/}
+            {/*  placeholder={'Enter Password'}*/}
+            {/*  containerStyle={[*/}
+            {/*    styles.passwordInput,*/}
+            {/*    {*/}
+            {/*      backgroundColor: passwordError*/}
+            {/*        ? 'rgba(255, 0, 0,0.15)'*/}
+            {/*        : 'white',*/}
+            {/*    },*/}
+            {/*  ]}*/}
+            {/*  onChangeText={e =>*/}
+            {/*    this.setState({password: e, passwordError: ''})*/}
+            {/*  }*/}
+            {/*  value={this.state.password}*/}
+            {/*  secureTextEntry={this.state.isPasswordVisible ? false : true}*/}
+            {/*  right={*/}
+            {/*    <Image*/}
+            {/*      source={require('../../assets/icons/eye.png')}*/}
+            {/*      style={[*/}
+            {/*        styles.eye,*/}
+            {/*        {*/}
+            {/*          tintColor: this.state.isPasswordVisible*/}
+            {/*            ? Colors.Primary*/}
+            {/*            : 'grey',*/}
+            {/*        },*/}
+            {/*      ]}*/}
+            {/*    />*/}
+            {/*  }*/}
+            {/*  rightPress={() =>*/}
+            {/*    this.setState(prev => ({*/}
+            {/*      isPasswordVisible: !prev.isPasswordVisible,*/}
+            {/*    }))*/}
+            {/*  }*/}
+            {/*/>*/}
+            {/*<ResponsiveText style={styles.errorText}>*/}
+            {/*  {passwordError}*/}
+            {/*</ResponsiveText>*/}
+
+            {/*<Button*/}
+            {/*  loading={this.state.loading}*/}
+            {/*  text={'Signup'}*/}
+            {/*  containerStyle={styles.Loginbutton}*/}
+            {/*  textStyle={styles.LoginbuttonText}*/}
+            {/*  onPress={*/}
+            {/*    () => this.Signup()*/}
+            {/*    //  this.props.navigation.navigate('GetReady')*/}
+            {/*  }*/}
+            {/*/>*/}
+            {/*<ResponsiveText style={styles.errorText}>*/}
+            {/*  {otherError}*/}
+            {/*</ResponsiveText>*/}
+          {/*</View>*/}
+          {/*<TouchableOpacity*/}
+          {/*  disabled={this.state.loading}*/}
+          {/*  onPress={() => this.props.navigation.navigate('Login')}*/}
+          {/*  style={{*/}
+          {/*    flexDirection: 'row',*/}
+          {/*    paddingBottom: wp('5'),*/}
+          {/*  }}>*/}
+          {/*  <Text*/}
+          {/*    style={{*/}
+          {/*      textDecorationLine: 'underline',*/}
+          {/*      // fontFamily: Fonts.RobotoRegular,*/}
+          {/*      color: '#7E7E7E',*/}
+          {/*    }}>*/}
+          {/*    Already have an account?{' '}*/}
+          {/*  </Text>*/}
+          {/*  <Text*/}
+          {/*    style={{*/}
+          {/*      color: Colors.Primary,*/}
+          {/*      textDecorationLine: 'underline',*/}
+          {/*      // fontFamily: Fonts.RobotoRegular,*/}
+          {/*    }}>*/}
+          {/*    Log In*/}
+          {/*  </Text>*/}
+          {/*</TouchableOpacity>*/}
         </ScrollView>
         <Toast
           ref="toast"
@@ -267,6 +372,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(Signup);
 const styles = {
   scrollView: {
     flexGrow: 1,
+    marginHorizontal: wp('10'),
     alignItems: 'center',
     justifyContent: 'space-between',
   },
@@ -277,36 +383,48 @@ const styles = {
     tintColor: Colors.PrimaryLight,
     opacity: 0.6,
   },
+  cardBackground: {
+    marginBottom: wp('50'),
+    paddingHorizontal:wp("5"),
+    borderRadius: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+  },
   errorText: {
     fontSize: 3.2,
     color: 'red',
     marginVertical: wp(1.2),
   },
   logo: {
-    height: wp('30'),
+    marginBottom: wp('20'),
+
+    height: wp('15'),
     width: wp('30'),
     resizeMode: 'contain',
-    marginBottom: wp('7'),
   },
   topContainer: {
+    backgroundColor: Colors.backgroundColor,
     alignItems: 'center',
-    paddingTop: wp('15'),
+    paddingTop: wp('20'),
+    paddingHorizontal:wp('5')
   },
   loginText: {
+    marginBottom: wp('10'),
+    paddingTop: wp('10'),
+
     fontSize: 6.5,
-    // fontWeight: 'bold',
-    marginBottom: wp('5'),
     // fontFamily: Fonts.RobotoMedium,
   },
   usernameInpt: {
-    width: wp('80'),
-    borderColor: Colors.Primary,
+    // width: wp('80'),
+    borderColor: Colors.inputBorder,
     paddingHorizontal: wp('4'),
     // marginBottom: wp('6'),
   },
   passwordInput: {
-    width: wp('80'),
-    borderColor: Colors.Primary,
+    // width: wp('80'),
+    borderColor: Colors.inputBorder,
     paddingHorizontal: wp('4'),
     // marginBottom: wp('6'),
   },
@@ -323,9 +441,9 @@ const styles = {
   },
 
   Loginbutton: {
-    width: wp('80'),
-    height: wp('15'),
-    // backgroundColor: '#0089FF',
+    width: wp('40'),
+    height: wp('12'),
+    backgroundColor:Colors.buttonBackground ,
     marginBottom: wp('3.5'),
     elevation: 0,
     marginTop: wp('10'),

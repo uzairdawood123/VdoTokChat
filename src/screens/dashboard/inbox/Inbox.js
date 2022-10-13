@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  SafeAreaView,
   View,
   Text,
   Image,
@@ -13,7 +14,6 @@ import LottieView from 'lottie-react-native';
 import {connect} from 'react-redux';
 import * as MVDOTOK from '../../../assets/js/vdotok-messaging';
 import RNFS from 'react-native-fs';
-
 
 import Container from '../../../components/Container';
 import AppHeader from '../../../components/AppHeader';
@@ -382,6 +382,7 @@ closeAllOpenRows() {
   }
 
   getAllUsers = () => {
+    this.setState({loadingModal: true});
     let data = {};
     this.setState({fetchingUsers: true});
     Group.getAllUsers({}, this.props.user.auth_token)
@@ -782,11 +783,15 @@ closeAllOpenRows() {
 
     Client.on('connect', res => {
       console.log('**res on connect sdk', res);
-      ToastAndroid.showWithGravity(
-        'SDK Connected',
-        ToastAndroid.LONG,
-        ToastAndroid.CENTER,
-      );
+      if (Platform.OS === 'android') {
+        ToastAndroid.showWithGravity(
+            'SDK Connected',
+            ToastAndroid.LONG,
+            ToastAndroid.CENTER,
+        );
+      } else {
+
+      }
       this.getGroups();
     });
 
@@ -863,12 +868,12 @@ closeAllOpenRows() {
   render() {
     return (
       <Container
-        barStyle={'dark-content'}
-        statusBarColor={Colors.PrimaryLight}
+      statusBarColor={Colors.white}
         style={{flex: 1}}>
+        {/*<SafeAreaView style={styles.container}>*/}
         <AppHeader
-          titleLeftAlign
-          containerStyle={styles.header}
+          // titleLeftAlign
+            containerStyle={styles.header}
           // left={
           //   <View style={styles.leftIconContainer}>
           //     {this.state.fetchingGroups ? (
@@ -887,15 +892,26 @@ closeAllOpenRows() {
           //     )}
           //   </View>
           // }
-          body={
-            <ResponsiveText style={styles.headertitle}>Inbox</ResponsiveText>
+          left ={
+            <ResponsiveText style={styles.headertitle}>Chat Rooms</ResponsiveText>
           }
-          // leftPress={() => {
-          //   if (!this.state.fetchingGroups) {
-          //     this.getAllUsers();
-          //     this.getGroups();
-          //   }
-          // }}
+
+          right={
+            <View>
+              <Image
+                  source={require('../../../assets/icons/plus.png')}
+                  style={styles.headerGroup}
+              />
+              {/* <View style={styles.notificationBadge} /> */}
+            </View>
+          }
+          // body={
+          //   <ResponsiveText style={styles.headertitle}>Inbox</ResponsiveText>
+          // }
+          rightPress={() => {
+            this.setState({createChatModal: true});
+
+          }}
 
 
         />
@@ -951,7 +967,7 @@ closeAllOpenRows() {
             return (
               <View style={styles.emptyContainer}>
                 {this.state.loading ? (
-                  <View style={{height: 200, width: 200}}>
+                  <View style={{height: "100%", width: 200}}>
                     {/* <LottieView
                       source={require('../../../assets/json/loading.json')}
                       autoPlay
@@ -960,16 +976,14 @@ closeAllOpenRows() {
                   </View>
                 ) : (
                   <>
-                    <View style={{height: 200, width: 300, opacity: 0.6}}>
-                      <LottieView
-                        source={require('../../../assets/json/chat.json')}
-                        autoPlay
-                        loop
+                    <View style={{height: 200, width: 300}}>
+                      <Image
+                        source={require('../../../assets/images/Shipping.png')}
                       />
                     </View>
                     <ResponsiveText
                       style={{opacity: 0.7, color: Colors.Primary}}>
-                      You dont't have any conversation!
+                      Tap and hold on any message to star it, so you can easily find it later
                     </ResponsiveText>
                     <ResponsiveText
                       style={{opacity: 0.7, color: Colors.Primary}}>
@@ -1010,7 +1024,7 @@ closeAllOpenRows() {
               //
 
               <ChatCard
-                key={item.id}
+                  key={item.id}
                 item={item}
                 // profile_image={item.profile_image}
                 user={this.props.user}
@@ -1023,6 +1037,9 @@ closeAllOpenRows() {
                   ) : (
                     <ResponsiveText
                       style={{
+                        display: 'flex',
+                        // alignItems: 'center',
+                        // justifyContent: 'center',
                         color: length > 0 ? 'green' : 'grey',
                         opacity: length > 0 ? 1 : 0.5,
                       }}>
@@ -1091,16 +1108,20 @@ closeAllOpenRows() {
                         : 'other'}
                     </ResponsiveText>
                   ) : (
-                    <ResponsiveText
-                      style={{
-                        // fontFamily: Fonts.OpenSansRegular,
-                        fontSize: 3.5,
-                        maxHeight: wp('6'),
-                        color: '#3A3A3A',
-                        opacity: 0.7,
+                      <View style={{flexDirection: 'row' ,justifyContent: 'space-between',
                       }}>
-                      No message yet
-                    </ResponsiveText>
+                        <ResponsiveText
+                            style={{
+                              // fontFamily: Fonts.OpenSansRegular,
+                              fontSize: 3.5,
+                              maxHeight: wp('6'),
+                              color: '#3A3A3A',
+                              opacity: 0.7,
+                            }}>
+                          No message yet
+                        </ResponsiveText>
+
+                      </View>
                   )
                 }
                 onPressCard={() => this.cardPress(unreadmsgs, item, index)}
@@ -1113,17 +1134,17 @@ closeAllOpenRows() {
 
 
 
-        <TouchableOpacity onPress={() => {
-            this.setState({createChatModal: true});
-          }} style={{height:60,width:60,borderRadius:60,backgroundColor:"rgba(26, 2, 83, 0.7)",position:'absolute',right:10,bottom:30,alignItems:'center',justifyContent:'center'}}>
-        <View>
-              <Image
-                source={require('../../../assets/icons/addchat.png')}
-                style={styles.headerNotificationIcon}
-              />
-              {/* <View style={styles.notificationBadge} /> */}
-            </View>
-        </TouchableOpacity>
+        {/*<TouchableOpacity onPress={() => {*/}
+        {/*    this.setState({createChatModal: true});*/}
+        {/*  }} style={{height:60,width:60,borderRadius:60,backgroundColor:"rgba(26, 2, 83, 0.7)",position:'absolute',right:10,bottom:30,alignItems:'center',justifyContent:'center'}}>*/}
+        {/*<View>*/}
+        {/*      <Image*/}
+        {/*        source={require('../../../assets/icons/addchat.png')}*/}
+        {/*        style={styles.headerNotificationIcon}*/}
+        {/*      />*/}
+        {/*      /!* <View style={styles.notificationBadge} /> *!/*/}
+        {/*    </View>*/}
+        {/*</TouchableOpacity>*/}
         {/* modal start */}
         <Modal
           animationType="slide"
@@ -1132,6 +1153,7 @@ closeAllOpenRows() {
           onRequestClose={() => {
             this.setState({createChatModal: false, searchText: ''});
           }}>
+          <SafeAreaView>
           <View style={styles.createChatModalContainer}>
             <AppHeader
               titleLeftAlign
@@ -1139,9 +1161,12 @@ closeAllOpenRows() {
               left={
                 <View style={styles.leftIconContainer}>
                   <Image
-                    source={require('../../../assets/icons/left_chevron2.png')}
+                    source={require('../../../assets/icons/arrow-left.png')}
                     style={styles.HeaderleftIconBack}
                   />
+                  <ResponsiveText style={styles.headertitle}>
+                    New Chat
+                  </ResponsiveText>
                 </View>
               }
               leftPress={() => {
@@ -1150,11 +1175,11 @@ closeAllOpenRows() {
                 //   this.getGroups()
                 // }
               }}
-              body={
-                <ResponsiveText style={styles.headertitle}>
-                  New Chat
-                </ResponsiveText>
-              }
+              // body={
+              //   <ResponsiveText style={styles.headertitle}>
+              //     New Chat
+              //   </ResponsiveText>
+              // }
               right={
                 <View>
                   <Image
@@ -1187,6 +1212,7 @@ closeAllOpenRows() {
                   inputField={styles.searchText}
                   containerStyle={styles.headerSearchbar}
                   placeholder={'Search'}
+                  placeholderTextColor="#C1D7D3"
                 />
               }
             />
@@ -1254,6 +1280,7 @@ closeAllOpenRows() {
               keyExtractor={(item, index) => `${index}`}
             />
           </View>
+          </SafeAreaView>
         </Modal>
         {/* modal ends */}
 
@@ -1269,6 +1296,7 @@ closeAllOpenRows() {
               selectedUsers: [],
             });
           }}>
+          <SafeAreaView>
           <View style={styles.createChatModalContainer}>
             <AppHeader
               titleLeftAlign
@@ -1276,9 +1304,13 @@ closeAllOpenRows() {
               left={
                 <View style={styles.leftIconContainer}>
                   <Image
-                    source={require('../../../assets/icons/left_chevron2.png')}
+                    source={require('../../../assets/icons/arrow-left.png')}
                     style={styles.HeaderleftIconBack}
                   />
+
+                  <ResponsiveText style={styles.headertitle}>
+                    Create Group Chat
+                  </ResponsiveText>
                 </View>
               }
               leftPress={() => {
@@ -1291,16 +1323,20 @@ closeAllOpenRows() {
                 //   this.getGroups()
                 // }
               }}
-              body={
-                <ResponsiveText style={styles.headertitle}>
-                  New Group Chat
-                </ResponsiveText>
-              }
+              // body={
+              //   <ResponsiveText style={styles.headertitle}>
+              //     New Group Chat
+              //   </ResponsiveText>
+              // }
               right={
                 <View>
+                  {/*<Image*/}
+                  {/*    source={require('../../../assets/icons/tick.png')}*/}
+                  {/*    style={styles.headerTickIcon}*/}
+                  {/*/>*/}
                   {this.state.selectedUsers.length > 0 && (
                     <Image
-                      source={require('../../../assets/icons/tick.png')}
+                      source={require('../../../assets/icons/Click.png')}
                       style={styles.headerTickIcon}
                     />
                   )}
@@ -1327,6 +1363,7 @@ closeAllOpenRows() {
                   inputField={styles.searchText}
                   containerStyle={styles.headerSearchbar}
                   placeholder={'Search'}
+                  placeholderTextColor="#C1D7D3"
                 />
               }
             />
@@ -1406,6 +1443,7 @@ closeAllOpenRows() {
               keyExtractor={(item, index) => `${index}`}
             />
           </View>
+            </SafeAreaView>
         </Modal>
 
         {/* groupchatmodal ends */}
@@ -1443,15 +1481,16 @@ closeAllOpenRows() {
                 </TouchableOpacity>
               </View>
               <AppHeader
-                containerStyle={{marginTop: 15, marginBottom: 15}}
+                containerStyle={{marginTop: 15, marginBottom: 15, backgroundColor: "white"}}
                 body={
                   <InputField
                     autoFocus
                     value={this.state.groupName}
                     onChangeText={e => this.setState({groupName: e})}
-                    inputField={styles.searchText}
+                    inputField={styles.searchTextForGroup}
                     containerStyle={styles.enterNameInput}
-                    placeholder={'Enter Here...'}
+                    placeholder={'Group Name'}
+                    placeholderTextColor="#C1D7D3"
                   />
                 }
               />
@@ -1465,7 +1504,7 @@ closeAllOpenRows() {
                   this.createGroup();
                 }}
                 loading={this.state.createGroupLoading}
-                containerStyle={{marginBottom: 10}}
+                containerStyle={{paddmarginBottom: 10, backgroundColor: Colors.buttonBackground}}
                 text={'Create Chat'}
               />
             </View>
@@ -1514,7 +1553,8 @@ closeAllOpenRows() {
                     onChangeText={e => this.setState({renameValue: e})}
                     inputField={styles.searchText}
                     containerStyle={styles.enterNameInput}
-                    placeholder={'Enter Here...'}
+                    placeholder={'Enter Here'}
+                    placeholderTextColor="#C1D7D3"
                   />
                 }
               />
@@ -1551,15 +1591,16 @@ closeAllOpenRows() {
               <Spinner
                 isVisible={true}
                 size={35}
-                type={'Wave'}
-                color={Colors.Primary}
+                type={'Circle'}
+                color={"black"}
               />
             </View>
           </View>
         </Modal>
 
         {/* loading modal ends */}
-      </Container>
+      {/*</SafeAreaView>*/}
+  </Container>
     );
   }
 }
@@ -1597,21 +1638,16 @@ export default connect(mapStateToProps, mapDispatchToProps)(Inbox);
 
 const styles = {
   header: {
-    backgroundColor: Colors.PrimaryLight,
+    backgroundColor: Colors.white,
   },
   modalHeader: {
-    backgroundColor: Colors.PrimaryLight,
+    backgroundColor: Colors.white,
     height: wp(10),
   },
   leftIconContainer: {
-    paddingVertical: 7,
-    paddingRight: 5,
-    opacity: 1,
-    height: wp('6'),
-    width: wp('6'),
-    display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between'
   },
   HeaderleftIcon: {
     height: wp('6'),
@@ -1627,19 +1663,22 @@ const styles = {
     tintColor: 'white',
   },
   headertitle: {
+    marginStart: 15,
+    // maxWidth: wp('100'),
+
+    width: wp('100'),
+
     // fontFamily: Fonts.OpenSansRegular,
-    fontSize: 5.3,
-    color: Colors.Primary,
+    fontSize: 5,
+    color: Colors.headerText,
   },
   clearFix: {
-    height: wp('0.4'),
-    backgroundColor: '#E1E1E1',
+    backgroundColor: 'white',
     // marginBottom:wp('4')
   },
   notificationBadge: {
     height: wp('2.8'),
     width: wp('2.8'),
-    backgroundColor: '#59EF0E',
     borderRadius: wp('2.8'),
     position: 'absolute',
     right: -4,
@@ -1647,6 +1686,7 @@ const styles = {
     elevation: 1,
   },
   emptyContainer: {
+    backgroundColor: Colors.white,
     flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -1654,13 +1694,13 @@ const styles = {
   createChatModalContainer: {
     height: '100%',
     width: wp(100),
-    backgroundColor: '#f5f5f0',
+    backgroundColor: 'white',
     borderTopWidth: 1,
-    borderTopColor: Colors.PrimaryLight,
+    borderTopColor: Colors.white,
   },
   HeaderleftIconBack: {
-    height: wp('3.5'),
-    width: wp('3.5'),
+    height: wp('6'),
+    width: wp('6'),
     resizeMode: 'contain',
     // backgroundColor: 'red'
   },
@@ -1668,21 +1708,32 @@ const styles = {
     height: wp('8'),
     width: wp('8'),
     resizeMode: 'contain',
-    tintColor: Colors.Primary,
+    tintColor: "black",
+  },
+  headerCreate: {
+    height: wp('8'),
+    width: wp('8'),
+    resizeMode: 'contain',
+    tintColor: "black",
+  },
+
+  headerGroup: {
+    height: wp('6'),
+    width: wp('6'),
+    tintColor: "black",
   },
   headerTickIcon: {
     height: wp('6'),
     width: wp('6'),
     resizeMode: 'contain',
-    tintColor: Colors.Primary,
   },
 
   headerSearchbar: {
     width: wp('90'),
-    height: wp('11'),
-    borderRadius: wp('10'),
+    height: wp('15'),
+    borderRadius: wp('4'),
     // marginLeft: -wp('2'),
-    backgroundColor: '#F2F2F2',
+    backgroundColor: Colors.editText,
     borderWidth: 0,
     // paddingLeft: wp('3'),
   },
@@ -1694,6 +1745,16 @@ const styles = {
     marginLeft: wp('1'),
   },
   searchText: {
+    backgroundColor: Colors.editText,
+    // fontFamily: Fonts.RobotoBold,
+    fontSize: wp('3.5'),
+    // marginLeft: -wp('1.5'),
+  },
+
+  searchTextForGroup: {
+    height: wp(10),
+    borderRadius: 10,
+    backgroundColor: Colors.editText,
     // fontFamily: Fonts.RobotoBold,
     fontSize: wp('3.5'),
     // marginLeft: -wp('1.5'),
@@ -1701,7 +1762,7 @@ const styles = {
   GroupNameModalContainer: {
     height: '100%',
     width: '100%',
-    backgroundColor: 'rgba(244, 223, 81, 0.4)',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -1718,7 +1779,7 @@ const styles = {
     height: 30,
     width: '100%',
     borderBottomWidth: 1,
-    borderBottomColor: 'rgba(0,0,0,0.4)',
+    // borderBottomColor: 'rgba(0,0,0,0.4)',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -1727,24 +1788,24 @@ const styles = {
   modalHeading: {
     // fontFamily: Fonts.RobotoBold,
     fontSize: 4.7,
-    color: Colors.Primary,
+    color: Colors.groupCardText,
   },
   modalCloseIcon: {
     padding: 5,
-    // backgroundColor:'red'
+    tintColor: Colors.inputBorder,
   },
   crossIcon: {
     height: 20,
     width: 20,
     resizeMode: 'contain',
-    tintColor: Colors.Primary,
+    tintColor: Colors.inputBorder,
   },
   enterNameInput: {
     width: wp('70%'),
-    height: wp('11'),
+    height: wp('20'),
     borderRadius: wp('10'),
     // marginLeft: -wp('2'),
-    backgroundColor: 'rgba(244, 223, 81, 0.4)',
+    backgroundColor: 'white',
     borderWidth: 0,
   },
   errorText: {
@@ -1761,7 +1822,15 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'flex-end',
     borderBottomWidth: wp('0.3'),
-    borderColor: '#E1E1E1',
+    // borderColor: '#E1E1E1',
+  },
+  Loginbutton: {
+    width: wp('40'),
+    height: wp('12'),
+    backgroundColor:Colors.buttonBackground ,
+    marginBottom: wp('3.5'),
+    elevation: 0,
+    marginTop: wp('10'),
   },
   singleHiddenButton: {
     width: 50,
@@ -1773,16 +1842,19 @@ const styles = {
     height: 40,
     width: 40,
     borderRadius: 40,
-    backgroundColor: '#ff8080',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
     tintColor: 'white',
+  },
+  container: {
+    flex: 1.5,
   },
   editButton: {
     height: 40,
     width: 40,
     borderRadius: 40,
-    backgroundColor: '#99ff99',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
     tintColor: 'white',

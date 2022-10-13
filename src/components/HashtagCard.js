@@ -13,13 +13,18 @@ class SingleUserCard extends Component {
   render() {
     const {item,onPressChatIcon} = this.props;
     return (
-      <View
-      activeOpacity={1}
+      <TouchableOpacity
+          onPress={()=>onPressChatIcon(item)}
+      activeOpacity={0}
         // onPress={() => this.props.navigation.navigate('Home')}
         style={styles.cardContainer}>
+        {/*<TouchableOpacity onPress={()=>onPressChatIcon(item)}>*/}
         <View style={styles.innerContainer}>
             <View style={styles.UserContainer}>
-              <ResponsiveText style={{color:Colors.Primary}}>{item.full_name.substring(0,1).toUpperCase()}</ResponsiveText>
+              <Image
+                  source={require('../assets/icons/UserGroup.png')}
+              />
+              {/*<ResponsiveText style={{color:Colors.Primary}}>{item.full_name.substring(0,1).toUpperCase()}</ResponsiveText>*/}
               {/* <Image
                 source={require('../assets/icons/hashtag.png')}
                 style={styles.hashtag}
@@ -31,13 +36,14 @@ class SingleUserCard extends Component {
             </ResponsiveText>
           </View>
         </View>
-        <TouchableOpacity onPress={()=>onPressChatIcon(item)} style={{height:'100%',width:'10%',alignItems:'flex-end',justifyContent:'center'}}>
-          <Image
-                source={require('../assets/icons/createChat.png')}
-                style={styles.hashtag}
-              />
-        </TouchableOpacity>
-      </View>
+        {/*<TouchableOpacity onPress={()=>onPressChatIcon(item)} style={{height:'100%',width:'10%',alignItems:'flex-end',justifyContent:'center'}}>*/}
+        {/*  <Image*/}
+        {/*        source={require('../assets/icons/createChat.png')}*/}
+        {/*        style={styles.hashtag}*/}
+        {/*      />*/}
+        {/*</TouchableOpacity>*/}
+        {/*</TouchableOpacity>*/}
+      </TouchableOpacity>
     );
   }
 }
@@ -47,26 +53,26 @@ const styles = {
   cardContainer: {
     height: wp('15'),
     // backgroundColor:'red',
-    borderBottomWidth: wp('0.3'),
     // paddingHorizontal:wp(5),
-    borderColor: '#E1E1E1',
+    backgroundColor: Colors.white,
+
+    borderColor: Colors.white,
     // borderColor:"#white",
     flexDirection:'row',
     justifyContent: 'center',
     alignItems:'center'
   },
   innerContainer: {
-    width: '90%',
+    backgroundColor: Colors.white,
+    width: '100%',
     height: wp('15'),
     flexDirection: 'row',
     alignItems:'center'
   },
   UserContainer: {
-    height: wp('10'),
-    width: wp('10'),
-    borderRadius: wp('10'),
+    backgroundColor: Colors.white,
+
     overflow: 'hidden',
-    backgroundColor: '#faeb84',
     justifyContent: 'center',
     alignItems: 'center',
   },

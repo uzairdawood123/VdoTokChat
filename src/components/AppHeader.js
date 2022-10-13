@@ -34,7 +34,7 @@ export default AppHeader;
 
 const styles = {
   customStyle: {
-    
+
     height: wp('16%'),
     width: '100%',
     justifyContent: 'space-between',
@@ -48,7 +48,7 @@ const styles = {
     flexDirection: 'row',
   },
   body: {
-    flex: 4,
+    flex: 1,
     alignItems: 'center',
   },
   right: {

@@ -94,105 +94,192 @@ class Login extends React.Component {
     const {nameError, passwordError, otherError} = this.state;
     return (
       <Container
-        backgroundImageStyle={styles.containerBack}
-        style={{flex: 1}}>
+        style={{flex: 1, backgroundColor: Colors.backgroundColor}}>
         <ScrollView contentContainerStyle={styles.scrollView}>
           <View style={styles.topContainer}>
             <Image
               source={require('../../assets/images/full_Logo.png')}
               style={styles.logo}
             />
-            <ResponsiveText style={styles.loginText}>Log In</ResponsiveText>
+          </View>
+          <View style={styles.cardBackground}>
+            <ResponsiveText style={styles.loginText}>Sign In</ResponsiveText>
             <InputField
-              //   autoFocus
-              placeholder={'Enter Email'}
-              value={this.state.userName}
-              containerStyle={[
-                styles.usernameInpt,
-                {backgroundColor: nameError ? 'rgba(255, 0, 0,0.15)' : 'white'},
-              ]}
-              keyboardType={'email-address'}
-              onChangeText={(e) => this.setState({userName: e, nameError: ''})}
+                //   autoFocus
+                placeholder={'Enter Email'}
+                placeholderTextColor="#C1D7D3"
+                value={this.state.userName}
+                containerStyle={[
+                  styles.usernameInpt,
+                  {backgroundColor: nameError ? 'rgba(255, 0, 0,0.15)' : 'white'},
+                ]}
+                keyboardType={'email-address'}
+                onChangeText={(e) => this.setState({userName: e, nameError: ''})}
             />
             <ResponsiveText style={styles.errorText}>
               {nameError}
             </ResponsiveText>
             <InputField
-              placeholder={'Enter Password'}
-              containerStyle={[
-                styles.passwordInput,
-                {
-                  backgroundColor: passwordError
-                    ? 'rgba(255, 0, 0,0.15)'
-                    : 'white',
-                },
-              ]}
-              onChangeText={(e) =>
-                this.setState({password: e, passwordError: ''})
-              }
-              value={this.state.password}
-              secureTextEntry={this.state.isPasswordVisible ? false : true}
-              right={
-                <Image
-                  source={require('../../assets/icons/eye.png')}
-                  style={[
-                    styles.eye,
-                    {
-                      tintColor: this.state.isPasswordVisible
-                        ? Colors.Primary
-                        : 'grey',
-                    },
-                  ]}
-                />
-              }
-              rightPress={() =>
-                this.setState((prev) => ({
-                  isPasswordVisible: !prev.isPasswordVisible,
-                }))
-              }
+                placeholder={'Enter Password'}
+                placeholderTextColor="#C1D7D3"
+
+                containerStyle={[
+                  styles.passwordInput,
+                  {
+                    backgroundColor: passwordError
+                        ? 'rgba(255, 0, 0,0.15)'
+                        : 'white',
+                  },
+                ]}
+                onChangeText={(e) =>
+                    this.setState({password: e, passwordError: ''})
+                }
+                value={this.state.password}
+                secureTextEntry={this.state.isPasswordVisible ? false : true}
+                right={
+                  <Image
+                      source={require('../../assets/icons/eye.png')}
+                      style={[
+                        styles.eye,
+                        {
+                          tintColor: this.state.isPasswordVisible
+                              ? Colors.Primary
+                              : 'grey',
+                        },
+                      ]}
+                  />
+                }
+                rightPress={() =>
+                    this.setState((prev) => ({
+                      isPasswordVisible: !prev.isPasswordVisible,
+                    }))
+                }
             />
             <ResponsiveText style={styles.errorText}>
               {passwordError}
             </ResponsiveText>
 
             <Button
-              loading={this.state.loading}
-              text={'Login'}
-              containerStyle={styles.Loginbutton}
-              textStyle={styles.LoginbuttonText}
-              onPress={
-                () => this.Login()
-                //  this.props.navigation.navigate('GetReady')
-              }
+                loading={this.state.loading}
+                text={'Login'}
+                containerStyle={styles.Loginbutton}
+                textStyle={styles.LoginbuttonText}
+                onPress={
+                  () => this.Login()
+                  //  this.props.navigation.navigate('GetReady')
+                }
             />
+
+            <TouchableOpacity
+                disabled={this.state.loading}
+                onPress={() => this.props.navigation.navigate('Signup')}
+                style={{
+                  flexDirection: 'row',
+                  paddingBottom: wp('5'),
+                }}>
+              <Text
+                  style={{
+                    color: "black",
+                    // fontFamily: Fonts.RobotoRegular,
+                  }}>
+                Sign Up
+              </Text>
+            </TouchableOpacity>
             <ResponsiveText style={styles.errorText}>
               {otherError}
             </ResponsiveText>
           </View>
-          <TouchableOpacity
-            disabled={this.state.loading}
-            onPress={() => this.props.navigation.navigate('Signup')}
-            style={{
-              flexDirection: 'row',
-              paddingBottom: wp('5'),
-            }}>
-            <Text
-              style={{
-                textDecorationLine: 'underline',
-                // fontFamily: Fonts.RobotoRegular,
-                color: '#7E7E7E',
-              }}>
-              Already have an account?{' '}
-            </Text>
-            <Text
-              style={{
-                color: Colors.Primary,
-                textDecorationLine: 'underline',
-                // fontFamily: Fonts.RobotoRegular,
-              }}>
-              Sign Up
-            </Text>
-          </TouchableOpacity>
+            {/*<ResponsiveText style={styles.loginText}>Log In</ResponsiveText>*/}
+            {/*<InputField*/}
+            {/*  //   autoFocus*/}
+            {/*  placeholder={'Enter Email'}*/}
+            {/*  value={this.state.userName}*/}
+            {/*  containerStyle={[*/}
+            {/*    styles.usernameInpt,*/}
+            {/*    {backgroundColor: nameError ? 'rgba(255, 0, 0,0.15)' : 'white'},*/}
+            {/*  ]}*/}
+            {/*  keyboardType={'email-address'}*/}
+            {/*  onChangeText={(e) => this.setState({userName: e, nameError: ''})}*/}
+            {/*/>*/}
+            {/*<ResponsiveText style={styles.errorText}>*/}
+            {/*  {nameError}*/}
+            {/*</ResponsiveText>*/}
+            {/*<InputField*/}
+            {/*  placeholder={'Enter Password'}*/}
+            {/*  containerStyle={[*/}
+            {/*    styles.passwordInput,*/}
+            {/*    {*/}
+            {/*      backgroundColor: passwordError*/}
+            {/*        ? 'rgba(255, 0, 0,0.15)'*/}
+            {/*        : 'white',*/}
+            {/*    },*/}
+            {/*  ]}*/}
+            {/*  onChangeText={(e) =>*/}
+            {/*    this.setState({password: e, passwordError: ''})*/}
+            {/*  }*/}
+            {/*  value={this.state.password}*/}
+            {/*  secureTextEntry={this.state.isPasswordVisible ? false : true}*/}
+            {/*  right={*/}
+            {/*    <Image*/}
+            {/*      source={require('../../assets/icons/eye.png')}*/}
+            {/*      style={[*/}
+            {/*        styles.eye,*/}
+            {/*        {*/}
+            {/*          tintColor: this.state.isPasswordVisible*/}
+            {/*            ? Colors.Primary*/}
+            {/*            : 'grey',*/}
+            {/*        },*/}
+            {/*      ]}*/}
+            {/*    />*/}
+            {/*  }*/}
+            {/*  rightPress={() =>*/}
+            {/*    this.setState((prev) => ({*/}
+            {/*      isPasswordVisible: !prev.isPasswordVisible,*/}
+            {/*    }))*/}
+            {/*  }*/}
+            {/*/>*/}
+            {/*<ResponsiveText style={styles.errorText}>*/}
+            {/*  {passwordError}*/}
+            {/*</ResponsiveText>*/}
+
+            {/*<Button*/}
+            {/*  loading={this.state.loading}*/}
+            {/*  text={'Login'}*/}
+            {/*  containerStyle={styles.Loginbutton}*/}
+            {/*  textStyle={styles.LoginbuttonText}*/}
+            {/*  onPress={*/}
+            {/*    () => this.Login()*/}
+            {/*    //  this.props.navigation.navigate('GetReady')*/}
+            {/*  }*/}
+            {/*/>*/}
+            {/*<ResponsiveText style={styles.errorText}>*/}
+            {/*  {otherError}*/}
+            {/*</ResponsiveText>*/}
+          {/*</View>*/}
+          {/*<TouchableOpacity*/}
+          {/*  disabled={this.state.loading}*/}
+          {/*  onPress={() => this.props.navigation.navigate('Signup')}*/}
+          {/*  style={{*/}
+          {/*    flexDirection: 'row',*/}
+          {/*    paddingBottom: wp('5'),*/}
+          {/*  }}>*/}
+          {/*  <Text*/}
+          {/*    style={{*/}
+          {/*      textDecorationLine: 'underline',*/}
+          {/*      // fontFamily: Fonts.RobotoRegular,*/}
+          {/*      color: '#7E7E7E',*/}
+          {/*    }}>*/}
+          {/*    Already have an account?{' '}*/}
+          {/*  </Text>*/}
+          {/*  <Text*/}
+          {/*    style={{*/}
+          {/*      color: Colors.Primary,*/}
+          {/*      textDecorationLine: 'underline',*/}
+          {/*      // fontFamily: Fonts.RobotoRegular,*/}
+          {/*    }}>*/}
+          {/*    Sign Up*/}
+          {/*  </Text>*/}
+          {/*</TouchableOpacity>*/}
         </ScrollView>
       </Container>
     );
@@ -218,9 +305,11 @@ export default connect(mapStateToProps, mapDispatchToProps)(Login);
 
 const styles = {
   scrollView: {
+    backgroundColor: Colors.backgroundColor,
+    marginHorizontal: wp('10'),
     flexGrow: 1,
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
   },
 
   errorText: {
@@ -229,30 +318,42 @@ const styles = {
     marginVertical: wp(1.2),
   },
   logo: {
-    height: wp('30'),
+    marginBottom: wp('20'),
+    height: wp('15'),
     width: wp('30'),
     resizeMode: 'contain',
-    marginBottom: wp('7'),
   },
   topContainer: {
+    backgroundColor: Colors.backgroundColor,
     alignItems: 'center',
-    paddingTop: wp('15'),
+    paddingTop: wp('20'),
+    paddingHorizontal:wp('5')
+  },
+  cardBackground: {
+    marginBottom: wp('50'),
+    paddingHorizontal:wp("5"),
+    borderRadius: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
   },
   loginText: {
+    marginBottom: wp('10'),
+    paddingTop: wp('10'),
+
     fontSize: 6.5,
     // fontWeight: 'bold',
-    marginBottom: wp('5'),
     // fontFamily: Fonts.RobotoMedium,
   },
   usernameInpt: {
-    width: wp('80'),
-    borderColor: Colors.Primary,
+    // width: wp('80'),
+    borderColor: Colors.inputBorder,
     paddingHorizontal: wp('4'),
     // marginBottom: wp('6'),
   },
   passwordInput: {
-    width: wp('80'),
-    borderColor: Colors.Primary,
+    // width: wp('80'),
+    borderColor: Colors.inputBorder,
     paddingHorizontal: wp('4'),
     // marginBottom: wp('6'),
   },
@@ -269,9 +370,9 @@ const styles = {
   },
 
   Loginbutton: {
-    width: wp('80'),
-    height: wp('15'),
-    // backgroundColor: '#0089FF',
+    width: wp('40'),
+    height: wp('12'),
+    backgroundColor:Colors.buttonBackground ,
     marginBottom: wp('3.5'),
     elevation: 0,
     marginTop: wp('10'),

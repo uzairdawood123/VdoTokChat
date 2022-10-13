@@ -19,13 +19,16 @@ class CreateGroupUserCard extends Component {
         // onPress={() => this.props.navigation.navigate('Home')}
         style={styles.cardContainer}>
         <View style={styles.innerContainer}>
-            <View style={styles.UserContainer}>
-              <ResponsiveText style={{color:Colors.Primary}}>{item.full_name.substring(0,1).toUpperCase()}</ResponsiveText>
+          <Image
+              source={require('../assets/icons/UserGroup.png')}
+          />
+            {/*<View style={styles.UserContainer}>*/}
+              {/*<ResponsiveText style={{color:Colors.Primary}}>{item.full_name.substring(0,1).toUpperCase()}</ResponsiveText>*/}
               {/* <Image
                 source={require('../assets/icons/hashtag.png')}
                 style={styles.hashtag}
               /> */}
-            </View>
+            {/*</View>*/}
           <View style={styles.UserNameContainer}>
             <ResponsiveText style={styles.UserText}>
               {item.full_name}
@@ -34,7 +37,7 @@ class CreateGroupUserCard extends Component {
         </View>
         <View style={{height:'100%',width:'10%',alignItems:'flex-end',justifyContent:'center'}}>
           {selected && <Image
-                source={require('../assets/icons/tickSimple.png')}
+                source={require('../assets/icons/Vector.png')}
                 style={styles.hashtag}
               />}
         </View>
@@ -50,7 +53,7 @@ const styles = {
     // backgroundColor:'red',
     borderBottomWidth: wp('0.3'),
     // paddingHorizontal:wp(5),
-    borderColor: '#E1E1E1',
+    borderColor: 'white',
     // borderColor:"#white",
     flexDirection:'row',
     justifyContent: 'center',
@@ -67,7 +70,7 @@ const styles = {
     width: wp('10'),
     borderRadius: wp('10'),
     overflow: 'hidden',
-    backgroundColor: '#faeb84',
+    backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -90,6 +93,6 @@ const styles = {
     height: 25,
     width: 25,
     resizeMode: 'contain',
-    tintColor: Colors.Primary,
+    tintColor: Colors.inputBorder,
   },
 };

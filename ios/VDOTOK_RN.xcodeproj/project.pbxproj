@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* VDOTOK_RNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* VDOTOK_RNTests.m */; };
+		0F47AB15A065B9799D0E1919 /* libPods-VDOTOK_RN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E076B20585593BF5C1A12E55 /* libPods-VDOTOK_RN.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		86FF863B7EE426F57035940A /* libPods-VDOTOK_RN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF921CD5ADADCDA4CA456C5 /* libPods-VDOTOK_RN.a */; };
+		C77FF7E24CD57BE7FF0F223A /* libPods-VDOTOK_RN-VDOTOK_RNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09807900472A2EECB0B31116 /* libPods-VDOTOK_RN-VDOTOK_RNTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		00E356EE1AD99517003FC87E /* VDOTOK_RNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VDOTOK_RNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* VDOTOK_RNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VDOTOK_RNTests.m; sourceTree = "<group>"; };
+		09807900472A2EECB0B31116 /* libPods-VDOTOK_RN-VDOTOK_RNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VDOTOK_RN-VDOTOK_RNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		099A6A1821D74131BC9B4284 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../src/assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* VDOTOK_RN1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VDOTOK_RN1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = VDOTOK_RN/AppDelegate.h; sourceTree = "<group>"; };
@@ -38,24 +40,24 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = VDOTOK_RN/main.m; sourceTree = "<group>"; };
 		31E9ED0AC8C24CAD83DCDD14 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		3583F363081547A9B5331514 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
-		3BEA1965AE0EB180190CA1CD /* Pods-VDOTOK_RN-VDOTOK_RNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VDOTOK_RN-VDOTOK_RNTests.debug.xcconfig"; path = "Target Support Files/Pods-VDOTOK_RN-VDOTOK_RNTests/Pods-VDOTOK_RN-VDOTOK_RNTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4DF63EFE2EE100F165027DBA /* Pods-VDOTOK_RN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VDOTOK_RN.debug.xcconfig"; path = "Target Support Files/Pods-VDOTOK_RN/Pods-VDOTOK_RN.debug.xcconfig"; sourceTree = "<group>"; };
+		5372E7DC5F5FECB0480E567C /* Pods-VDOTOK_RN-VDOTOK_RNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VDOTOK_RN-VDOTOK_RNTests.debug.xcconfig"; path = "Target Support Files/Pods-VDOTOK_RN-VDOTOK_RNTests/Pods-VDOTOK_RN-VDOTOK_RNTests.debug.xcconfig"; sourceTree = "<group>"; };
+		550985B794A199C925268189 /* Pods-VDOTOK_RN-VDOTOK_RNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VDOTOK_RN-VDOTOK_RNTests.release.xcconfig"; path = "Target Support Files/Pods-VDOTOK_RN-VDOTOK_RNTests/Pods-VDOTOK_RN-VDOTOK_RNTests.release.xcconfig"; sourceTree = "<group>"; };
 		6F5A20BAAC6D40ED92DD37D5 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../src/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		70BA8586E6A44EFD93CEE640 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		71DB94DBAB8146A28A37FFDC /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
-		7AF921CD5ADADCDA4CA456C5 /* libPods-VDOTOK_RN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VDOTOK_RN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = VDOTOK_RN/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9561F9EDB5694AEF89B5329D /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Regular.ttf"; path = "../src/assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		AACD66951BC941648D9285A0 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		B8AEA3D09A7E7E4B384CB7EE /* Pods-VDOTOK_RN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VDOTOK_RN.release.xcconfig"; path = "Target Support Files/Pods-VDOTOK_RN/Pods-VDOTOK_RN.release.xcconfig"; sourceTree = "<group>"; };
+		B4A78EAB01BB462EAC7E249D /* Pods-VDOTOK_RN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VDOTOK_RN.release.xcconfig"; path = "Target Support Files/Pods-VDOTOK_RN/Pods-VDOTOK_RN.release.xcconfig"; sourceTree = "<group>"; };
 		BA2DFD40E2D8439A9655866C /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		BA9A5C2065524404AFDF6A07 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../src/assets/fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		DCA6C304A0FC433C9DC924F2 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		DCC8125DA32244C4B6F7AB3B /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		E04421E1656C47C2AE5AC5A9 /* Pods-VDOTOK_RN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VDOTOK_RN.debug.xcconfig"; path = "Target Support Files/Pods-VDOTOK_RN/Pods-VDOTOK_RN.debug.xcconfig"; sourceTree = "<group>"; };
+		E076B20585593BF5C1A12E55 /* libPods-VDOTOK_RN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VDOTOK_RN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E620243342D7406D8E222792 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../src/assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		E9CC27113CEE434B88A4E612 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F85E324B86518FB06AEF3A93 /* Pods-VDOTOK_RN-VDOTOK_RNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VDOTOK_RN-VDOTOK_RNTests.release.xcconfig"; path = "Target Support Files/Pods-VDOTOK_RN-VDOTOK_RNTests/Pods-VDOTOK_RN-VDOTOK_RNTests.release.xcconfig"; sourceTree = "<group>"; };
 		F9580BDD8DC34CD69890F33C /* Roboto-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Black.ttf"; path = "../src/assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		FA32D6FC76BB45F18BB9B73A /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C77FF7E24CD57BE7FF0F223A /* libPods-VDOTOK_RN-VDOTOK_RNTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86FF863B7EE426F57035940A /* libPods-VDOTOK_RN.a in Frameworks */,
+				0F47AB15A065B9799D0E1919 /* libPods-VDOTOK_RN.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				7AF921CD5ADADCDA4CA456C5 /* libPods-VDOTOK_RN.a */,
+				E076B20585593BF5C1A12E55 /* libPods-VDOTOK_RN.a */,
+				09807900472A2EECB0B31116 /* libPods-VDOTOK_RN-VDOTOK_RNTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,10 +132,10 @@
 		61FFE06A0D6914C3BE2C8219 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4DF63EFE2EE100F165027DBA /* Pods-VDOTOK_RN.debug.xcconfig */,
-				B8AEA3D09A7E7E4B384CB7EE /* Pods-VDOTOK_RN.release.xcconfig */,
-				3BEA1965AE0EB180190CA1CD /* Pods-VDOTOK_RN-VDOTOK_RNTests.debug.xcconfig */,
-				F85E324B86518FB06AEF3A93 /* Pods-VDOTOK_RN-VDOTOK_RNTests.release.xcconfig */,
+				E04421E1656C47C2AE5AC5A9 /* Pods-VDOTOK_RN.debug.xcconfig */,
+				B4A78EAB01BB462EAC7E249D /* Pods-VDOTOK_RN.release.xcconfig */,
+				5372E7DC5F5FECB0480E567C /* Pods-VDOTOK_RN-VDOTOK_RNTests.debug.xcconfig */,
+				550985B794A199C925268189 /* Pods-VDOTOK_RN-VDOTOK_RNTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -199,12 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "VDOTOK_RNTests" */;
 			buildPhases = (
-				288B15086F9A48567213A729 /* [CP] Check Pods Manifest.lock */,
+				956D13BEDE41325FEE71DC7D /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				5712D1725DF78A707AF2BB8D /* [CP] Embed Pods Frameworks */,
-				3A4137CCD88A46FA67CE329F /* [CP] Copy Pods Resources */,
+				A7EDB9C9C0B158258F7F43B2 /* [CP] Embed Pods Frameworks */,
+				760D1363F71C2625ACA9299A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,14 +224,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "VDOTOK_RN" */;
 			buildPhases = (
-				F342FFED95478B692F98F4E6 /* [CP] Check Pods Manifest.lock */,
+				4FFBAA3B84A276E510AD6A57 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				68A43F71DBF535BEF7CDFE18 /* [CP] Embed Pods Frameworks */,
-				4493069259AD471FEB62E68A /* [CP] Copy Pods Resources */,
+				FBB64619E407404EC05EF7BC /* [CP] Embed Pods Frameworks */,
+				C9F096D2F3AD46C9FFA863C3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,7 +312,46 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		288B15086F9A48567213A729 /* [CP] Check Pods Manifest.lock */ = {
+		4FFBAA3B84A276E510AD6A57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VDOTOK_RN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		760D1363F71C2625ACA9299A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN-VDOTOK_RNTests/Pods-VDOTOK_RN-VDOTOK_RNTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN-VDOTOK_RNTests/Pods-VDOTOK_RN-VDOTOK_RNTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN-VDOTOK_RNTests/Pods-VDOTOK_RN-VDOTOK_RNTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		956D13BEDE41325FEE71DC7D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,41 +373,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3A4137CCD88A46FA67CE329F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN-VDOTOK_RNTests/Pods-VDOTOK_RN-VDOTOK_RNTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN-VDOTOK_RNTests/Pods-VDOTOK_RN-VDOTOK_RNTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN-VDOTOK_RNTests/Pods-VDOTOK_RN-VDOTOK_RNTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4493069259AD471FEB62E68A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN/Pods-VDOTOK_RN-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN/Pods-VDOTOK_RN-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN/Pods-VDOTOK_RN-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5712D1725DF78A707AF2BB8D /* [CP] Embed Pods Frameworks */ = {
+		A7EDB9C9C0B158258F7F43B2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -381,7 +390,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN-VDOTOK_RNTests/Pods-VDOTOK_RN-VDOTOK_RNTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		68A43F71DBF535BEF7CDFE18 /* [CP] Embed Pods Frameworks */ = {
+		C9F096D2F3AD46C9FFA863C3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN/Pods-VDOTOK_RN-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN/Pods-VDOTOK_RN-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN/Pods-VDOTOK_RN-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBB64619E407404EC05EF7BC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -396,28 +422,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VDOTOK_RN/Pods-VDOTOK_RN-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F342FFED95478B692F98F4E6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VDOTOK_RN-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -472,7 +476,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BEA1965AE0EB180190CA1CD /* Pods-VDOTOK_RN-VDOTOK_RNTests.debug.xcconfig */;
+			baseConfigurationReference = 5372E7DC5F5FECB0480E567C /* Pods-VDOTOK_RN-VDOTOK_RNTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -507,7 +511,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F85E324B86518FB06AEF3A93 /* Pods-VDOTOK_RN-VDOTOK_RNTests.release.xcconfig */;
+			baseConfigurationReference = 550985B794A199C925268189 /* Pods-VDOTOK_RN-VDOTOK_RNTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -539,12 +543,12 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DF63EFE2EE100F165027DBA /* Pods-VDOTOK_RN.debug.xcconfig */;
+			baseConfigurationReference = E04421E1656C47C2AE5AC5A9 /* Pods-VDOTOK_RN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NCB2YNWB2Y;
+				DEVELOPMENT_TEAM = 2XMPHHJW2J;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -560,7 +564,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.VDOTOK-R5";
 				PRODUCT_NAME = VDOTOK_RN1;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -570,12 +574,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8AEA3D09A7E7E4B384CB7EE /* Pods-VDOTOK_RN.release.xcconfig */;
+			baseConfigurationReference = B4A78EAB01BB462EAC7E249D /* Pods-VDOTOK_RN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NCB2YNWB2Y;
+				DEVELOPMENT_TEAM = 2XMPHHJW2J;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/..",
@@ -590,7 +594,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.VDOTOK-R5";
 				PRODUCT_NAME = VDOTOK_RN1;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

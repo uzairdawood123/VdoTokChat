@@ -40,16 +40,16 @@ class ChatCard extends Component {
         style={styles.cardContainer}>
         <View style={styles.innerContainer}>
           <View>
-            <View style={styles.imageContainer}>
-              {/* <ImageBackground
-                source={require('../assets/images/placeholder.png')}
-                style={styles.placeholderImage}> */}
-                {<Image
-                  source={item.auto_created===0?require('../assets/icons/users.png'):require('../assets/icons/user.png')}
-                  style={styles.profileImage}
-                />}
-              {/* </ImageBackground> */}
-            </View>
+            {/*<View style={styles.imageContainer}>*/}
+            {/*  /!* <ImageBackground*/}
+            {/*    source={require('../assets/images/placeholder.png')}*/}
+            {/*    style={styles.placeholderImage}> *!/*/}
+            {/*    {<Image*/}
+            {/*      source={item.auto_created===0?require('../assets/icons/users.png'):require('../assets/icons/user.png')}*/}
+            {/*      style={styles.profileImage}*/}
+            {/*    />}*/}
+            {/*  /!* </ImageBackground> *!/*/}
+            {/*</View>*/}
             {unseen_messsages !== 0 && (
               <View style={styles.unseenBadge}>
                 <ResponsiveText
@@ -74,6 +74,7 @@ class ChatCard extends Component {
                                     .find(
                                       (e) => e !== this.props.user.username
                                     ):item.group_title}</ResponsiveText>
+
             <View style={styles.lastMessage}>
               {last_message}
             </View>
@@ -101,13 +102,14 @@ const styles = {
     width: '100%',
     height: wp('15'),
     flexDirection: 'row',
+    alignItems : "center"
   },
   imageContainer: {
     height: wp('14'),
     width: wp('14'),
     borderRadius: wp('14'),
     overflow: 'hidden',
-    backgroundColor:'#faeb84',
+    backgroundColor:Colors.white,
     alignItems:'center',
     justifyContent:'center'
   },

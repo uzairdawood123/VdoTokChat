@@ -30,8 +30,8 @@ class Navigation extends Component {
           <Tab.Navigator
             screenOptions={({route}) => ({
                 headerShown: false,
-                tabBarActiveTintColor: Colors.Primary,
-                tabBarInactiveTintColor: '#8a8a8a',
+                tabBarActiveTintColor: "white",
+                tabBarInactiveTintColor: "white",
                 tabBarStyle: {
                   height: wp('15'),
                   backgroundColor:Colors.PrimaryLight
