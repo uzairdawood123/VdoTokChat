@@ -5,8 +5,9 @@ import {
   Image,
   FlatList,
   TouchableOpacity,
-  Platform,
+  Platform, PermissionsAndroid, StatusBar,
 } from 'react-native';
+import * as ScopedStorage from "react-native-scoped-storage"
 import Container from '../../../components/Container';
 import AppHeader from '../../../components/AppHeader';
 import ResponsiveText from '../../../components/ResponsiveText';
@@ -129,6 +130,31 @@ class Messages extends React.Component {
     }, 0);
   };
 
+
+  async requestLocationPermission() {
+    const chckLocationPermission = PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE && PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE);
+    if (chckLocationPermission === PermissionsAndroid.RESULTS.GRANTED) {
+      alert("You've access for the location");
+    } else {
+      try {
+        const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+            {
+              'title': 'Cool Location App required Location permission',
+              'message': 'We required Location permission in order to get device location ' +
+                  'Please grant us.'
+            }
+        )
+        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+          alert("You've access for the location");
+        } else {
+          alert("You don't have access for the location");
+        }
+      } catch (err) {
+        alert(err)
+      }
+    }
+  };
+
   sendMessage = () => {
     const {Client} = this.props.route.params;
 
@@ -182,6 +208,16 @@ class Messages extends React.Component {
     }
   };
   componentDidMount(){
+    saveData()
+    // this.requestLocationPermission()
+    const granted = PermissionsAndroid.check( PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE && PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE );
+
+    if (granted) {
+      console.log( "You can use the ACCESS_FINE_LOCATION" )
+    }
+    else {
+      console.log( "ACCESS_FINE_LOCATION permission denied" )
+    }
     if (Platform.OS === 'ios') {
       this.setState({platform: true});
     } else {
@@ -208,6 +244,10 @@ class Messages extends React.Component {
     //console.log('client-->', Client);
     return (
       <Container style={{flex: 1,}}>
+        <StatusBar
+            backgroundColor={Colors.white}
+            translucent={false}
+        />
         <AppHeader
           titleLeftAlign
           containerStyle={styles.header}
@@ -440,6 +480,38 @@ class Messages extends React.Component {
     );
   }
 }
+
+
+const saveData = async () => {
+  try {
+    const granted = await PermissionsAndroid.requestMultiple([
+      PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+      PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
+    ]);
+  } catch (err) {
+    console.warn(err);
+  }
+  const readGranted = await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE);
+  const writeGranted = await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE);
+  if(!readGranted || !writeGranted) {
+    console.log('Read and write permissions have not been granted');
+    return;
+  } else {
+    console.log("granted");
+
+  }
+  // var path = `${RNFS.ExternalStorageDirectoryPath}/MyApp`;
+  // RNFS.mkdir(path);
+  // path += '/data.json';
+  // RNFS.writeFile(path, JSON.stringify(getData()), 'utf8')
+  //     .then((success) => {
+  //       console.log('Success');
+  //     })
+  //     .catch((err) => {
+  //       console.log(err.message);
+  //     });
+}
+
 const mapDispatchToProps = dispatch => {
   return {
     setCurrentChannel: channel => dispatch(selectCurrentChannel(channel)),
@@ -509,7 +581,7 @@ const styles = {
     // marginBottom:wp('4')
   },
   sendInputContainer: {
-    height: wp('10'),
+    height: wp('20'),
     width: wp('100'),
     // position: 'absolute',
     bottom: 0,

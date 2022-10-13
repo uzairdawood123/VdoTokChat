@@ -9,6 +9,7 @@ import {
   ToastAndroid,
   TouchableOpacity, Platform,
 } from 'react-native';
+import { PermissionsAndroid } from 'react-native'
 import {SwipeListView} from 'react-native-swipe-list-view';
 import LottieView from 'lottie-react-native';
 import {connect} from 'react-redux';
@@ -84,6 +85,7 @@ closeAllOpenRows() {
     ref && ref.closeRow && ref.closeRow();
   });
 }
+
   renameGroup = () => {
     if (this.state.renameValue.trim().length === 0) {
       this.setState({ renameError: "Please Enter Group Name !" });
@@ -203,6 +205,10 @@ closeAllOpenRows() {
         this.closeAllOpenRows()
       });
   };
+
+  permision =()=>{
+    PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE)
+  }
 
   createOnetoOnegroup = user => {
     //console.log('one to one user===>', user);
@@ -425,6 +431,7 @@ closeAllOpenRows() {
     this.disconnectSDK();
   }
 
+
   subscribeChannels = groups => {
     groups.forEach(e => {
       // this.state.Client.UnSubscribe(e);
@@ -599,7 +606,8 @@ closeAllOpenRows() {
         console.log("tjoss")
         var path  = ""
         if (Platform.OS === 'android'){
-           path = `file://${RNFS.DownloadDirectoryPath}/${res.id}.${res.ext}`;
+          console.log("ANDROIDD")
+          path = `file://${RNFS.DocumentDirectoryPath}/${res.id}.${res.ext}`;
 
         } else {
            path = `file://${RNFS.DocumentDirectoryPath}/${res.id}.${res.ext}`;
@@ -1626,6 +1634,7 @@ closeAllOpenRows() {
     );
   }
 }
+
 const mapDispatchToProps = dispatch => {
   return {
     reduxstoreUserInfo: user => dispatch(storeUserInfo(user)),

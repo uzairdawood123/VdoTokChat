@@ -1,10 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-37:12
-INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-37:12
-MERGED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-37:12
+ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-40:12
+MERGED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-40:12
 MERGED from [com.facebook.flipper:flipper:0.99.0] /Users/uzairist/.gradle/caches/transforms-3/2f5725507f1929c6ddf8255f0bef77bd/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.99.0] /Users/uzairist/.gradle/caches/transforms-3/2c29b736c8f2a9d82fade7115b471d70/transformed/jetified-flipper-network-plugin-0.99.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.99.0] /Users/uzairist/.gradle/caches/transforms-3/e3a733608d857c466939da27af54ba77/transformed/jetified-flipper-fresco-plugin-0.99.0/AndroidManifest.xml:8:1-15:12
@@ -15,6 +15,7 @@ MERGED from [:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokC
 MERGED from [:react-native-fs] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-image-picker] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:react-native-safe-area-context] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-scoped-storage] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-scoped-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-snackbar] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-snackbar/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-spinkit] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-spinkit/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
@@ -49,6 +50,7 @@ MERGED from [androidx.appcompat:appcompat-resources:1.3.0] /Users/uzairist/.grad
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/uzairist/.gradle/caches/transforms-3/57e3d46cd409853c916c88a2c3ae94fd/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/uzairist/.gradle/caches/transforms-3/db0f9dfc2cb9e58d20874cad38a46146/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.exifinterface:exifinterface:1.3.1] /Users/uzairist/.gradle/caches/transforms-3/04655643de074827e9fcf4a899c705f6/transformed/exifinterface-1.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.1] /Users/uzairist/.gradle/caches/transforms-3/6a9938d2ea74929e1b505af503c1f5e3/transformed/documentfile-1.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/uzairist/.gradle/caches/transforms-3/530e90c3ee142f7f959c69298c7c5ded/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/uzairist/.gradle/caches/transforms-3/a19e52b53eb437c1a1e2beb909f23bc9/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.3.4] /Users/uzairist/.gradle/caches/transforms-3/d29e2b008fda9570dcb20a45a8889feb/transformed/fragment-1.3.4/AndroidManifest.xml:17:1-24:12
@@ -87,13 +89,13 @@ INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/debug/
 		INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-37:12
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-40:12
 		INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:2:11-57
 	android:versionCode
 		INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-37:12
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:1-40:12
 		INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -105,10 +107,20 @@ MERGED from [:lottie-react-native] /Users/uzairist/work/ReactNative/VdoTokChat/n
 MERGED from [:lottie-react-native] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/lottie-react-native/src/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
 	android:name
 		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:8:5-81
+MERGED from [:react-native-fs] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+MERGED from [:react-native-fs] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:8:22-78
 application
-ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:8:5-29:19
-MERGED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:8:5-29:19
-MERGED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:8:5-29:19
+ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:11:5-32:19
+MERGED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:11:5-32:19
+MERGED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:11:5-32:19
 MERGED from [:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-image-picker] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
@@ -128,63 +140,63 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/uzai
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.5.0] /Users/uzairist/.gradle/caches/transforms-3/5646db46e2cfb43e7b3d42f3054c498c/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:12:7-39
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:12:7-39
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:15:7-39
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:15:7-39
 	tools:ignore
 		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/debug/AndroidManifest.xml:10:9-48
 	android:roundIcon
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:14:7-52
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:14:7-52
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:17:7-52
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:17:7-52
 	tools:targetApi
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:10:5-25
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:13:5-25
 	android:icon
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:13:7-41
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:13:7-41
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:16:7-41
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:16:7-41
 	android:allowBackup
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:15:7-34
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:15:7-34
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:18:7-34
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:18:7-34
 	android:theme
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:16:7-38
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:16:7-38
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:19:7-38
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:19:7-38
 	android:usesCleartextTraffic
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:9:5-40
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:12:5-40
 	android:name
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:11:7-38
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:11:7-38
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:14:7-38
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:14:7-38
 activity#com.vdotok_rn.MainActivity
-ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:17:7-28:18
+ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:20:7-31:18
 	windowSoftInputMode
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:22:9-40
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:25:9-40
 	android:label
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:19:9-41
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:22:9-41
 	android:launchMode
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:21:9-40
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:24:9-40
 	android:configChanges
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:20:9-86
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:23:9-86
 	android:name
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:18:9-37
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:21:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:24:9-27:25
+ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:27:9-30:25
 action#android.intent.action.MAIN
-ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:25:13-65
+ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:28:13-65
 	android:name
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:25:21-62
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:28:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:26:13-73
+ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:29:13-73
 	android:name
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:26:23-70
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:29:23-70
 queries
-ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:30:6-36:12
+ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:33:6-39:12
 intent#action:name:android.intent.action.VIEW+data:mimeType:*/*
-ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:31:3-35:12
+ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:34:3-38:12
 action#android.intent.action.VIEW
-ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:32:6-58
+ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:35:6-58
 	android:name
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:32:14-55
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:35:14-55
 data
-ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:34:6-37
+ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:37:6-37
 	android:mimeType
-		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:34:12-34
+		ADDED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml:37:12-34
 uses-sdk
 INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/AndroidManifest.xml
@@ -209,6 +221,8 @@ MERGED from [:react-native-image-picker] /Users/uzairist/work/ReactNative/VdoTok
 MERGED from [:react-native-image-picker] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-safe-area-context] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-safe-area-context] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-scoped-storage] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-scoped-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-scoped-storage] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-scoped-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-snackbar] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-snackbar/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -277,6 +291,8 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/uzairist/.gradle/c
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/uzairist/.gradle/caches/transforms-3/db0f9dfc2cb9e58d20874cad38a46146/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.3.1] /Users/uzairist/.gradle/caches/transforms-3/04655643de074827e9fcf4a899c705f6/transformed/exifinterface-1.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.3.1] /Users/uzairist/.gradle/caches/transforms-3/04655643de074827e9fcf4a899c705f6/transformed/exifinterface-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.1] /Users/uzairist/.gradle/caches/transforms-3/6a9938d2ea74929e1b505af503c1f5e3/transformed/documentfile-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.1] /Users/uzairist/.gradle/caches/transforms-3/6a9938d2ea74929e1b505af503c1f5e3/transformed/documentfile-1.0.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/uzairist/.gradle/caches/transforms-3/530e90c3ee142f7f959c69298c7c5ded/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/uzairist/.gradle/caches/transforms-3/530e90c3ee142f7f959c69298c7c5ded/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/uzairist/.gradle/caches/transforms-3/a19e52b53eb437c1a1e2beb909f23bc9/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -369,10 +385,6 @@ ADDED from [:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokCh
 		ADDED from [:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
 	android:name
 		ADDED from [:react-native-file-viewer] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-file-viewer/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from [:react-native-fs] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
-	android:name
-		ADDED from [:react-native-fs] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
 provider#com.imagepicker.ImagePickerProvider
 ADDED from [:react-native-image-picker] /Users/uzairist/work/ReactNative/VdoTokChat/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
 	android:grantUriPermissions

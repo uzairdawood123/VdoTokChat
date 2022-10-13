@@ -25,6 +25,8 @@ import com.rnfs.RNFSPackage;
 import com.imagepicker.ImagePickerPackage;
 // react-native-safe-area-context
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
+// react-native-scoped-storage
+import com.ammarahmed.scopedstorage.RNScopedStoragePackage;
 // react-native-screens
 import com.swmansion.rnscreens.RNScreensPackage;
 // react-native-snackbar
@@ -87,6 +89,7 @@ public class PackageList {
       new RNFSPackage(),
       new ImagePickerPackage(),
       new SafeAreaContextPackage(),
+      new RNScopedStoragePackage(),
       new RNScreensPackage(),
       new SnackbarPackage(),
       new RNSpinkitPackage(),
