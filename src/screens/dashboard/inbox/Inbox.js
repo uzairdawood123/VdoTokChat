@@ -27,6 +27,7 @@ import ChatCard from '../../../components/ChatCard';
 import {Colors} from '../../../themes/Colors';
 import {logoutUser, storeUserInfo} from '../../../redux/user/actions';
 import {
+  clearAllData,
   manageAllMessages,
   manageFilesObject,
   manageOnlineUsers,
@@ -607,7 +608,14 @@ closeAllOpenRows() {
         var path  = ""
         if (Platform.OS === 'android'){
           console.log("ANDROIDD")
-          path = `file://${RNFS.DocumentDirectoryPath}/${res.id}.${res.ext}`;
+          if (Platform.Version <= 28) {
+            console.log("versio 28")
+            path = `file://${RNFS.DownloadDirectoryPath}/${res.id}.${res.ext}`;
+
+          } else {
+            path = `file://${RNFS.DocumentDirectoryPath}/${res.id}.${res.ext}`;
+
+          }
 
         } else {
            path = `file://${RNFS.DocumentDirectoryPath}/${res.id}.${res.ext}`;
@@ -693,23 +701,61 @@ closeAllOpenRows() {
           this.props.manageAllMessages({...msgobj});
 
         }
-      } else if (res.content) {
+      }
+      else if (res.content) {
+        console.log("tjoss")
+        var path = ""
+        if (Platform.OS === 'android') {
+          console.log("android")
+          path = `file://${RNFS.DownloadDirectoryPath}/${res.id}.${res.ext}`;
 
-                              console.log('FILE WRITTEN: ', );
-                              let msgobj = this.props.allRoomsMessages;
-          let currentmsgsAray = [...new Set(msgobj[res.to])];
-          let indexx = currentmsgsAray.findIndex(e => e.id == res.id);
-          if (indexx > -1) {
-            currentmsgsAray[indexx]['loading'] = false;
-            msgobj[res.to] = [...currentmsgsAray];
-            this.props.manageAllMessages({...msgobj});
-          }
+        } else {
+          console.log("ioss")
+          path = `file://${RNFS.DocumentDirectoryPath}/${res.id}.${res.ext}`;
 
+        }
+        //console.log('path-->',path);
+        RNFS.writeFile(path, res.content.split('base64,')[1], 'base64')
+            .then(success => {
+              //console.log('FILE WRITTEN: ', );
+              let msgobj = this.props.allRoomsMessages;
+              let currentmsgsAray = [...new Set(msgobj[res.to])];
+              let indexx = currentmsgsAray.findIndex(e => e.id == res.id);
+              if (indexx > -1) {
+                let temp = this.props.filesObject;
+                temp[res.id] = path;
+                this.props.manageFilesObject({...temp});
 
+                currentmsgsAray[indexx]['content'] = res.id;
+                currentmsgsAray[indexx]['loading'] = false;
 
+                msgobj[res.to] = [...currentmsgsAray];
 
-
-
+                this.props.manageAllMessages({...msgobj});
+              }
+            })
+            .catch(err => {
+              //console.log('File Write Error: ', err.message);
+              alert(err.message)
+            });
+        // else if (res.content) {
+        //
+        //                         console.log('FILE WRITTEN: ', );
+        //                         let msgobj = this.props.allRoomsMessages;
+        //     let currentmsgsAray = [...new Set(msgobj[res.to])];
+        //     let indexx = currentmsgsAray.findIndex(e => e.id == res.id);
+        //     if (indexx > -1) {
+        //       currentmsgsAray[indexx]['loading'] = false;
+        //       msgobj[res.to] = [...currentmsgsAray];
+        //       this.props.manageAllMessages({...msgobj});
+        //     }
+        //
+        //
+        //
+        //
+        //
+        //
+        // }
       }
     }
   };
@@ -719,7 +765,7 @@ closeAllOpenRows() {
     // this.props.setCurrentChannel(null);
     Group.getGroups(null, this.props.user.auth_token)
       .then(res => {
-        console.log('res on getgroups-->', res);
+        // console.log('res on getgroups-->', res);
         if (res.data.status === 200) {
           let grpsToSubscribe = [];
           let manageOnlineObj = {};
@@ -813,8 +859,12 @@ closeAllOpenRows() {
     });
 
     Client.on('online', response => {
-      //console.log('**res on online  ', response);
+      // console.log('**res on online  ', response);
       this.setUserOnline(response);
+    });
+
+    Client.on('disconnect', response => {
+      console.log('**res on disconnect  ', response);
     });
 
     Client.on('create', response => {
@@ -822,12 +872,12 @@ closeAllOpenRows() {
     });
 
     Client.on('offline', response => {
-      //console.log('**res on offline  ', response);
+      // console.log('**res on offline  ', response);
       this.setUserOffline(response);
     });
 
     Client.on('message', response => {
-      //console.log('**res on message ', response);
+      console.log('**res on message ', response);
       if (response.from == this.props.user.ref_id) {
         this.onMyMessageReceived(response);
       } else {
@@ -836,7 +886,7 @@ closeAllOpenRows() {
     });
 
     Client.on('messagesent', response => {
-      // //console.log("**res on messagesent ",response);
+      console.log("**res on messagesent ",response);
     });
 
     this.setState({Client: Client});
@@ -1162,6 +1212,25 @@ closeAllOpenRows() {
           keyExtractor={(item, index) => `${index}`}
         />
 
+        <View style={{height:40, alignItems:'center', justifyContent:'space-between', paddingHorizontal: 16, marginBottom: 20 }}>
+          <ResponsiveText style={{color: Colors.buttonBackground, marginBottom: 12}}>
+            {this.props.user && this.props.user.full_name}
+          </ResponsiveText>
+
+          <Button
+              text={'Logout'}
+              containerStyle={styles.logoutButton}
+              // disabled={true}
+              onPress={()=>{
+                this.props.reduxlogoutUser()
+                this.props.reduxClearAllData()
+              }}
+          />
+          {/*<ResponsiveText style={{}} onPress={()=>{*/}
+          {/*  this.props.reduxlogoutUser()*/}
+          {/*  this.props.reduxClearAllData()*/}
+          {/*}}>logout</ResponsiveText>*/}
+        </View>
 
 
         {/*<TouchableOpacity onPress={() => {*/}
@@ -1271,7 +1340,7 @@ closeAllOpenRows() {
                         <ResponsiveText
                           style={{
                             opacity: 0.7,
-                            color: Colors.Primary,
+                            color: Colors.headerText,
                             marginTop: 20,
                           }}>
                           No User Found
@@ -1639,6 +1708,7 @@ const mapDispatchToProps = dispatch => {
   return {
     reduxstoreUserInfo: user => dispatch(storeUserInfo(user)),
     reduxlogoutUser: () => dispatch(logoutUser()),
+    reduxClearAllData: () => dispatch(clearAllData()),
     setGroups: groups => dispatch(storeGroups(groups)),
     setCurrentChannel: channel => dispatch(selectCurrentChannel(channel)),
     storeAllUsers: users => dispatch(storeAllUsers(users)),
@@ -1848,7 +1918,7 @@ const styles = {
   hiddenView: {
     height: '100%',
     width: '100%',
-    backgroundColor: '#ffffe6',
+    backgroundColor: Colors.inputBorder,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-end',
@@ -1869,11 +1939,24 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
   },
+  logoutButton: {
+    height: wp(7),
+    width: wp(20),alignItems: 'center',
+    paddingBottom: 1,
+    justifyContent: 'center', backgroundColor: "black"},
+
+  logoutIcon: {
+    height: wp(2),
+    width: wp(2),
+    resizeMode: 'contain',
+    marginRight: 5,
+    tintColor: 'white',
+  },
   deleteButton: {
     height: 40,
     width: 40,
     borderRadius: 40,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
     tintColor: 'white',
@@ -1885,7 +1968,7 @@ const styles = {
     height: 40,
     width: 40,
     borderRadius: 40,
-    backgroundColor: 'black',
+    backgroundColor: Colors.white,
     alignItems: 'center',
     justifyContent: 'center',
     tintColor: 'white',
@@ -1894,6 +1977,11 @@ const styles = {
     height: '50%',
     width: '50%',
     resizeMode: 'contain',
-    tintColor:Colors.Primary
+    tintColor: "black"
   },
+  bottomCenter: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    marginBottom: 30
+  }
 };

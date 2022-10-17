@@ -1906,6 +1906,7 @@ layout text_view_without_line_height
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw mycert
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2885,6 +2886,7 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable scaleStyle scalableType
 xml file_viewer_provider_paths
 xml imagepicker_provider_paths
+xml network_security_config
 xml rn_dev_preferences
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end

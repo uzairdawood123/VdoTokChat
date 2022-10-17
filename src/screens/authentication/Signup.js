@@ -99,7 +99,7 @@ class Signup extends React.Component {
             this.setState({otherError: res.data.message});
           }
         })
-        .catch(err => console.log('err on signup-->', err))
+        .catch(err => console.log('err on signup-->',err))
         .finally(() => {
           this.setState({loading: false});
         });

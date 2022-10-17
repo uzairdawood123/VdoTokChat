@@ -43,7 +43,7 @@ class Login extends React.Component {
   Login = () => {
     const {userName, password} = this.state;
 
-    const Emailreg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    // const Emailreg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (userName.trim().length === 0) {
       this.setState({nameError: 'Enter Email'});
@@ -67,7 +67,7 @@ class Login extends React.Component {
         email:this.state.userName,
         password:this.state.password,
         // project_id: '15Q89R'
-        project_id: "6NE92I"
+        project_id: "115G1WZI"
       };
       User.Login(user)
       .then(res=>{

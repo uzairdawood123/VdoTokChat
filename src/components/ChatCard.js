@@ -39,7 +39,7 @@ class ChatCard extends Component {
         activeOpacity={1}
         style={styles.cardContainer}>
         <View style={styles.innerContainer}>
-          <View>
+          {/*<View>*/}
             {/*<View style={styles.imageContainer}>*/}
             {/*  /!* <ImageBackground*/}
             {/*    source={require('../assets/images/placeholder.png')}*/}
@@ -50,19 +50,7 @@ class ChatCard extends Component {
             {/*    />}*/}
             {/*  /!* </ImageBackground> *!/*/}
             {/*</View>*/}
-            {unseen_messsages !== 0 && (
-              <View style={styles.unseenBadge}>
-                <ResponsiveText
-                  style={{
-                    fontSize: 3,
-                    color: 'white',
-                    // fontFamily: Fonts.OpenSansRegular,
-                  }}>
-                  {unseen_messsages}
-                </ResponsiveText>
-              </View>
-            )}
-          </View>
+          {/*</View>*/}
           <View style={styles.nameContainer}>
             <ResponsiveText
                     numberOfLines={1}
@@ -74,6 +62,18 @@ class ChatCard extends Component {
                                     .find(
                                       (e) => e !== this.props.user.username
                                     ):item.group_title}</ResponsiveText>
+            {unseen_messsages !== 0 && (
+                <View style={styles.unseenBadge}>
+                  <ResponsiveText
+                      style={{
+                        fontSize: 3,
+                        color: 'white',
+                        // fontFamily: Fonts.OpenSansRegular,
+                      }}>
+                    {unseen_messsages}
+                  </ResponsiveText>
+                </View>
+            )}
 
             <View style={styles.lastMessage}>
               {last_message}
@@ -126,7 +126,7 @@ const styles = {
   },
   unseenBadge: {
     borderRadius: wp('10'),
-    backgroundColor: '#ff3333',
+    backgroundColor: 'black',
     position: 'absolute',
     right: 0,
     paddingVertical: wp('0.5'),

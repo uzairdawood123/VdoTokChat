@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VDOTOK_RN.iml" filepath="$PROJECT_DIR$/.idea/modules/VDOTOK_RN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VDOTOK_RN.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VDOTOK_RN.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VDOTOK_RN.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VDOTOK_RN.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VDOTOK_RN.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VDOTOK_RN.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VDOTOK_RN.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VDOTOK_RN.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-277433624/VDOTOK_RN.lottie-react-native.iml" filepath="$PROJECT_DIR$/.idea/modules/-277433624/VDOTOK_RN.lottie-react-native.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-277433624/VDOTOK_RN.lottie-react-native.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-277433624/VDOTOK_RN.lottie-react-native.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-277433624/VDOTOK_RN.lottie-react-native.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-277433624/VDOTOK_RN.lottie-react-native.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-277433624/VDOTOK_RN.lottie-react-native.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-277433624/VDOTOK_RN.lottie-react-native.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1828818788/VDOTOK_RN.react-native-community_async-storage.iml" filepath="$PROJECT_DIR$/.idea/modules/-1828818788/VDOTOK_RN.react-native-community_async-storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1828818788/VDOTOK_RN.react-native-community_async-storage.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1828818788/VDOTOK_RN.react-native-community_async-storage.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1828818788/VDOTOK_RN.react-native-community_async-storage.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1828818788/VDOTOK_RN.react-native-community_async-storage.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1828818788/VDOTOK_RN.react-native-community_async-storage.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1828818788/VDOTOK_RN.react-native-community_async-storage.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1714318616/VDOTOK_RN.react-native-document-picker.iml" filepath="$PROJECT_DIR$/.idea/modules/1714318616/VDOTOK_RN.react-native-document-picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1714318616/VDOTOK_RN.react-native-document-picker.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1714318616/VDOTOK_RN.react-native-document-picker.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1714318616/VDOTOK_RN.react-native-document-picker.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1714318616/VDOTOK_RN.react-native-document-picker.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1714318616/VDOTOK_RN.react-native-document-picker.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1714318616/VDOTOK_RN.react-native-document-picker.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-931587045/VDOTOK_RN.react-native-file-viewer.iml" filepath="$PROJECT_DIR$/.idea/modules/-931587045/VDOTOK_RN.react-native-file-viewer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-931587045/VDOTOK_RN.react-native-file-viewer.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-931587045/VDOTOK_RN.react-native-file-viewer.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-931587045/VDOTOK_RN.react-native-file-viewer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-931587045/VDOTOK_RN.react-native-file-viewer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-931587045/VDOTOK_RN.react-native-file-viewer.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-931587045/VDOTOK_RN.react-native-file-viewer.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2133437429/VDOTOK_RN.react-native-fs.iml" filepath="$PROJECT_DIR$/.idea/modules/2133437429/VDOTOK_RN.react-native-fs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2133437429/VDOTOK_RN.react-native-fs.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/2133437429/VDOTOK_RN.react-native-fs.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2133437429/VDOTOK_RN.react-native-fs.main.iml" filepath="$PROJECT_DIR$/.idea/modules/2133437429/VDOTOK_RN.react-native-fs.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2133437429/VDOTOK_RN.react-native-fs.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/2133437429/VDOTOK_RN.react-native-fs.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1661386600/VDOTOK_RN.react-native-image-picker.iml" filepath="$PROJECT_DIR$/.idea/modules/1661386600/VDOTOK_RN.react-native-image-picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1661386600/VDOTOK_RN.react-native-image-picker.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1661386600/VDOTOK_RN.react-native-image-picker.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1661386600/VDOTOK_RN.react-native-image-picker.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1661386600/VDOTOK_RN.react-native-image-picker.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1661386600/VDOTOK_RN.react-native-image-picker.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1661386600/VDOTOK_RN.react-native-image-picker.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-436190905/VDOTOK_RN.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/-436190905/VDOTOK_RN.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-436190905/VDOTOK_RN.react-native-safe-area-context.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-436190905/VDOTOK_RN.react-native-safe-area-context.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-436190905/VDOTOK_RN.react-native-safe-area-context.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-436190905/VDOTOK_RN.react-native-safe-area-context.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-436190905/VDOTOK_RN.react-native-safe-area-context.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-436190905/VDOTOK_RN.react-native-safe-area-context.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-125381530/VDOTOK_RN.react-native-scoped-storage.iml" filepath="$PROJECT_DIR$/.idea/modules/-125381530/VDOTOK_RN.react-native-scoped-storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-125381530/VDOTOK_RN.react-native-scoped-storage.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-125381530/VDOTOK_RN.react-native-scoped-storage.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-125381530/VDOTOK_RN.react-native-scoped-storage.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-125381530/VDOTOK_RN.react-native-scoped-storage.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-125381530/VDOTOK_RN.react-native-scoped-storage.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-125381530/VDOTOK_RN.react-native-scoped-storage.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1492663839/VDOTOK_RN.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/1492663839/VDOTOK_RN.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1492663839/VDOTOK_RN.react-native-screens.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1492663839/VDOTOK_RN.react-native-screens.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1492663839/VDOTOK_RN.react-native-screens.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1492663839/VDOTOK_RN.react-native-screens.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1492663839/VDOTOK_RN.react-native-screens.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1492663839/VDOTOK_RN.react-native-screens.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1332864467/VDOTOK_RN.react-native-snackbar.iml" filepath="$PROJECT_DIR$/.idea/modules/-1332864467/VDOTOK_RN.react-native-snackbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1332864467/VDOTOK_RN.react-native-snackbar.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1332864467/VDOTOK_RN.react-native-snackbar.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1332864467/VDOTOK_RN.react-native-snackbar.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1332864467/VDOTOK_RN.react-native-snackbar.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1332864467/VDOTOK_RN.react-native-snackbar.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1332864467/VDOTOK_RN.react-native-snackbar.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1080044/VDOTOK_RN.react-native-spinkit.iml" filepath="$PROJECT_DIR$/.idea/modules/1080044/VDOTOK_RN.react-native-spinkit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1080044/VDOTOK_RN.react-native-spinkit.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1080044/VDOTOK_RN.react-native-spinkit.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1080044/VDOTOK_RN.react-native-spinkit.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1080044/VDOTOK_RN.react-native-spinkit.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1080044/VDOTOK_RN.react-native-spinkit.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1080044/VDOTOK_RN.react-native-spinkit.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1008313288/VDOTOK_RN.react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/-1008313288/VDOTOK_RN.react-native-vector-icons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1008313288/VDOTOK_RN.react-native-vector-icons.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1008313288/VDOTOK_RN.react-native-vector-icons.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1008313288/VDOTOK_RN.react-native-vector-icons.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1008313288/VDOTOK_RN.react-native-vector-icons.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1008313288/VDOTOK_RN.react-native-vector-icons.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1008313288/VDOTOK_RN.react-native-vector-icons.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-544637165/VDOTOK_RN.react-native-video.iml" filepath="$PROJECT_DIR$/.idea/modules/-544637165/VDOTOK_RN.react-native-video.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-544637165/VDOTOK_RN.react-native-video.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-544637165/VDOTOK_RN.react-native-video.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-544637165/VDOTOK_RN.react-native-video.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-544637165/VDOTOK_RN.react-native-video.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-544637165/VDOTOK_RN.react-native-video.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-544637165/VDOTOK_RN.react-native-video.unitTest.iml" />
+    </modules>
+  </component>
+</project>

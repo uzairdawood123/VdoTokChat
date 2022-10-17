@@ -232,7 +232,7 @@ const MessageBubble = props => {
                                       <>
                                           <VideoPlayer
                                               video={{
-                                                  uri: props.item.from !== props.user.ref_id?`file://${RNFS.DownloadDirectoryPath}/${item.content}.${item.ext}`:props.filesObject[props.item.id],
+                                                  uri: props.item.from !== props.user.ref_id?`file://${Platform.OS === 'android'?RNFS.DownloadDirectoryPath:RNFS.DocumentDirectoryPath}/${item.content}.${item.ext}`:props.filesObject[props.item.id],
                                               }}
                                               videoWidth={200}
                                               videoHeight={50}
@@ -274,7 +274,7 @@ const MessageBubble = props => {
                                           style={{alignItems:'center',justifyContent:'center',padding:10}}
                                           onPress={async() => {
                                               // console.log('hellow',`file://${RNFS.DownloadDirectoryPath}/${item.content}.${item.ext}`,RNFS.DocumentDirectoryPath,RNFS.DownloadDirectoryPath,RNFS.PicturesDirectoryPath,RNFS.ExternalStorageDirectoryPath,RNFS.DownloadDirectoryPath);
-                                              await  FileViewer.open(props.item.from !== props.user.ref_id?`file://${RNFS.DownloadDirectoryPath}/${item.content}.${item.ext}`:props.filesObject[props.item.id]);
+                                              await  FileViewer.open(props.item.from !== props.user.ref_id?`file://${Platform.OS === 'android'?RNFS.DownloadDirectoryPath:RNFS.DocumentDirectoryPath}/${item.content}.${item.ext}`:props.filesObject[props.item.id]);
                                               // Linking.openURL(props.filesObject[props.item.id])
                                               // .catch(
                                               //   err => {console.error("Couldn't load page", err)}

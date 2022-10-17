@@ -107,7 +107,10 @@ class Navigation extends Component {
             <>
               {/* <Stack.Screen name="Profile" component={Profile} /> */}
 
-              <Stack.Screen name="Dashboard" component={this.DashboardTab} />
+              {/*<Stack.Screen name="Dashboard" component={this.DashboardTab} />*/}
+                <Stack.Screen name="Dashboard" component={Inbox} />
+
+                {/*<Tab.Screen name="Dashboard" options={{title: ''}} component={Inbox} />*/}
              <Stack.Screen name="Messages" component={Messages} />
             </>
           )}

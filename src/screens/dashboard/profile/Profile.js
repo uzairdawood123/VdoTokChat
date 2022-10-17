@@ -76,16 +76,16 @@ export default connect(mapStateToProps, mapDispatchToProps)(Profile);
 
 const styles = {
   logoutIcon: {
-    height: wp(6),
-    width: wp(6),
+    height: wp(4),
+    width: wp(2),
     resizeMode: 'contain',
     marginRight: 5,
     tintColor: 'white',
   },
   logoutButton: {opacity:0.9},
   logo: {
-    height: wp(50),
-    width: wp(50),
+    height: wp(20),
+    width: wp(20),
     resizeMode: 'contain',
   },
   name: {
