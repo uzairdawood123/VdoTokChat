@@ -201,7 +201,7 @@ class Client extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"] {
         else {
             this.Authentication();
         }
-     
+
         // this.registerPingWorker();
     }
     static consoleLog(...args) {
@@ -212,6 +212,7 @@ class Client extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"] {
      * Connetion with server and user registeration
      */
     Register(username, password) {
+        console.log("sdk register")
         this.Username = username;
         this.Password = password;
         /**
@@ -231,7 +232,7 @@ class Client extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"] {
       }, 3000);
         // client._checkPing()
 
-       
+
         /***
          * Set CallBacks
          */
@@ -272,6 +273,7 @@ class Client extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"] {
             Client.consoleLog('on presence',data);
         });
         client.on('disconnect', (data) => {
+            console.log("sdk disconnext")
             this.emit("disconnect", data);
         });
         client.on('error', (data) => {
@@ -307,7 +309,7 @@ class Client extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"] {
         });
     }
     Presence(options) {
-        // this.Connection.unsubscribe(); 
+        // this.Connection.unsubscribe();
         //   this.Connection.presence({
         //     key: options.key,
         //     channel: options.channel,
@@ -334,7 +336,7 @@ class Client extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"] {
                     const payload = packet.payload;
                     const cmd = packet.cmd;
                     if (cmd == "publish" && payload != null && payload == JSON.stringify(options)) {
-                        // Client.consoleLog("===ReceivedMessage",message.toString());     
+                        // Client.consoleLog("===ReceivedMessage",message.toString());
                         this.emit("messagesent", { channel: topic, message: message });
                     }
                 }
@@ -351,7 +353,7 @@ class Client extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"] {
                     const payload = packet.payload;
                     const cmd = packet.cmd;
                     if (cmd == "publish" && payload != null && payload == JSON.stringify(options)) {
-                        //  Client.consoleLog("===ReceivedMessage",message.toString());     
+                        //  Client.consoleLog("===ReceivedMessage",message.toString());
                         this.emit("messagesent", { channel: topic, message: message });
                     }
                 }
@@ -388,7 +390,7 @@ class Client extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"] {
         //       let payload=packet.payload;
         //               let cmd=packet.cmd;
         //               if(cmd=="publish" && payload!=null && payload==JSON.stringify(options)){
-        //               //  Client.consoleLog("===ReceivedMessage",message.toString());     
+        //               //  Client.consoleLog("===ReceivedMessage",message.toString());
         //                 this.emit("messagesent",{channel:topic,message:message});
         //               }
         //     }
@@ -517,7 +519,7 @@ class Client extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"] {
                 const newContent = files.Content;
                 if(ins){
           ins._sendPacket({ cmd: "pingreq" });
-          
+
                 }
                 files.Content = newContent.concat(JsonPacket.content);
 
@@ -1102,7 +1104,7 @@ class File {
 
 
 // ConvertDataURIToBinary(dataURI) {
-  
+
 //   var raw = window.atob(base64);
 //   var rawLength = raw.length;
 //   var array = new Uint8Array(new ArrayBuffer(rawLength));
@@ -1117,17 +1119,17 @@ class File {
 
         let base64Array=file.match(/.{1,4000}/g);
         // console.log('7777=',base64Array);
-    
+
 
 
 
 
         let fileObj = { fileType: "", file: "", ext: "" };
-    
+
             fileObj.fileType = "Base64";
             fileObj.file = file;
             fileObj.ext = params.ext;
-       
+
 
     // console.log("===PEEE===Jaon===",fileObj);
     let fileSize = file.length;
@@ -1158,7 +1160,7 @@ class File {
 
       }else{
 
-      
+
           let fileOjbect = Object(_Helpers_ArrayHelper__WEBPACK_IMPORTED_MODULE_0__["GetFileObject"])(file);
           // console.log('**)1',fileOjbect);
         //console.log("===PEEE===Jaon===",fileOjbect);
@@ -1185,7 +1187,7 @@ class File {
         });
       }
 
-        
+
     }
     SendHeaderFirst(params, instance,isBase64) {
         // console.log("SendHeaderFirst",params);
@@ -1294,7 +1296,7 @@ __webpack_require__.r(__webpack_exports__);
 //       var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
 //       return v.toString(16).toUpperCase();
 //   });
-// } 
+// }
 function GetUUID() {
     return new Date().getTime().toString();
 }
@@ -1325,7 +1327,7 @@ function Base64ToUnInt8Array(base64) {
 
               res.arrayBuffer()
               // console.log("**)5-->",res.arrayBuffer());
-            
+
             })
             .then((buffer) => {
               // console.log("**)6-->",buffer);
@@ -4601,6 +4603,7 @@ MqttClient.prototype._handlePacket = function (packet, done) {
       done()
       break
     case 'disconnect':
+        console.log("sdk disconnect 1")
       this._handleDisconnect(packet)
       done()
       break
@@ -17836,7 +17839,7 @@ function ReInterval (callback, interval, args) {
       self._interval = undefined;
     }
   };
-  
+
   this.destroy = function () {
     if (self._interval) {
       clearInterval(self._interval);

@@ -705,9 +705,16 @@ closeAllOpenRows() {
       else if (res.content) {
         console.log("tjoss")
         var path = ""
-        if (Platform.OS === 'android') {
-          console.log("android")
-          path = `file://${RNFS.DownloadDirectoryPath}/${res.id}.${res.ext}`;
+        if (Platform.OS === 'android'){
+          console.log("ANDROIDD")
+          if (Platform.Version <= 28) {
+            console.log("versio 28")
+            path = `file://${RNFS.DownloadDirectoryPath}/${res.id}.${res.ext}`;
+
+          } else {
+            path = `file://${RNFS.DocumentDirectoryPath}/${res.id}.${res.ext}`;
+
+          }
 
         } else {
           console.log("ioss")
@@ -831,13 +838,16 @@ closeAllOpenRows() {
     let Client = new MVDOTOK.Client({
       projectID: '115G1WZI',
       secret: '3d9686b635b15b5bc2d19800407609fa',
-      host: `ws://q-messaging.vdotok.dev:8080`,
+      host: `wss://q-messaging.vdotok.dev:443`,
     });
     console.log('client after initializing==>', Client);
     Client.Register(
       this.props.user.ref_id,
       this.props.user.authorization_token,
     );
+    console.log('ref', this.props.user.ref_id);
+    console.log('auth', this.props.user.authorization_token);
+
 
     Client.on('connect', res => {
       console.log('**res on connect sdk', res);
@@ -1943,7 +1953,7 @@ const styles = {
     height: wp(7),
     width: wp(20),alignItems: 'center',
     paddingBottom: 1,
-    justifyContent: 'center', backgroundColor: "black"},
+    justifyContent: 'center', backgroundColor: Colors.buttonBackground},
 
   logoutIcon: {
     height: wp(2),

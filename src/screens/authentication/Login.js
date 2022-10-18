@@ -43,7 +43,7 @@ class Login extends React.Component {
   Login = () => {
     const {userName, password} = this.state;
 
-    // const Emailreg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const Emailreg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (userName.trim().length === 0) {
       this.setState({nameError: 'Enter Email'});
@@ -143,7 +143,7 @@ class Login extends React.Component {
                         styles.eye,
                         {
                           tintColor: this.state.isPasswordVisible
-                              ? Colors.Primary
+                              ? Colors.headerText
                               : 'grey',
                         },
                       ]}

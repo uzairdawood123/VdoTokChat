@@ -300,8 +300,8 @@ const MessageBubble = props => {
                   </View>
                   {sending && (
                       <ActivityIndicator
-                          color={Colors.Primary}
-                          style={{height: 3, width: 3, marginLeft: 15}}
+                          color={"black"}
+                          style={{height: 6, width: 6, marginLeft: 15}}
                       />
                   )}
               </View>

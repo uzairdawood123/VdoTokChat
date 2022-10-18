@@ -1,0 +1,4 @@
+#Mon Oct 17 23:21:57 PKT 2022
+base.0=/Users/uzairist/work/ReactNative/VdoTokChat/android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

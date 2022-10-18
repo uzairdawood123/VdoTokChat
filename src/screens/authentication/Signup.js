@@ -99,7 +99,11 @@ class Signup extends React.Component {
             this.setState({otherError: res.data.message});
           }
         })
-        .catch(err => console.log('err on signup-->',err))
+        .catch(err => {
+          console.log('err on signup-->', err)
+          this.setState({otherError:typeof err.response !== "undefined" ? err.response.data.message : err.message})
+
+        })
         .finally(() => {
           this.setState({loading: false});
         });
@@ -176,7 +180,7 @@ class Signup extends React.Component {
                           styles.eye,
                           {
                             tintColor: this.state.isPasswordVisible
-                                ? Colors.Primary
+                                ? Colors.headerText
                                 : 'grey',
                           },
                         ]}
@@ -202,9 +206,7 @@ class Signup extends React.Component {
                     //  this.props.navigation.navigate('GetReady')
                   }
               />
-              <ResponsiveText style={styles.errorText}>
-                {otherError}
-              </ResponsiveText>
+
 
 
               <TouchableOpacity
@@ -223,6 +225,10 @@ class Signup extends React.Component {
                   Log In
                 </Text>
               </TouchableOpacity>
+             <ResponsiveText style={styles.errorText}>
+                {otherError}
+              </ResponsiveText>
+
 
             </View>
             {/*<ResponsiveText style={styles.loginText}>Sign Up</ResponsiveText>*/}
@@ -394,7 +400,7 @@ const styles = {
   errorText: {
     fontSize: 3.2,
     color: 'red',
-    marginVertical: wp(1.2),
+    marginVertical: wp(2),
   },
   logo: {
     marginBottom: wp('20'),

@@ -44,6 +44,10 @@
         "source": "/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/uzairist/work/ReactNative/VdoTokChat/android/app/build/intermediates/res/merged/debug/raw_mycert2.crt.flat",
+        "source": "/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/res/raw/mycert2.crt"
+    },
+    {
         "merged": "/Users/uzairist/work/ReactNative/VdoTokChat/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/uzairist/work/ReactNative/VdoTokChat/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     }

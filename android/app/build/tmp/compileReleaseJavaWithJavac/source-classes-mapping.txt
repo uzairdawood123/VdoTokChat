@@ -1,0 +1,9 @@
+com/vdotok_rn/MainApplication.java
+ com.vdotok_rn.MainApplication
+ com.vdotok_rn.MainApplication$1
+com/vdotok_rn/BuildConfig.java
+ com.vdotok_rn.BuildConfig
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/vdotok_rn/MainActivity.java
+ com.vdotok_rn.MainActivity

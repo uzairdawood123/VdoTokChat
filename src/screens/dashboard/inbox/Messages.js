@@ -4,6 +4,8 @@ import {
   Text,
   Image,
   FlatList,
+  Modal,
+    ActivityIndicator,
   TouchableOpacity,
   Platform, PermissionsAndroid, StatusBar,
 } from 'react-native';
@@ -44,7 +46,9 @@ class Messages extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      loadingModal: false,
       chat: messages,
+      spinner : true,
       text: '',
       payload: null,
       platform: false
@@ -100,8 +104,9 @@ class Messages extends React.Component {
   };
 
 
-  //console.log('this is object to be send-->',object);
-  Client.SendFile(fileBase64,object,true);
+  console.log('this is object to be send-->',object);
+      this.setState({loadingModal: true});
+      Client.SendFile(fileBase64,object,true);
 
   }
     else{
@@ -243,7 +248,7 @@ class Messages extends React.Component {
 
     //console.log('client-->', Client);
     return (
-      <Container style={{flex: 1,}}>
+      <Container  visible={this.state.loadingModal}>
         <StatusBar
             backgroundColor={Colors.white}
             translucent={false}
@@ -477,6 +482,7 @@ class Messages extends React.Component {
             <KeyboardSpacer/>
         ) : (null)}
       </Container>
+
     );
   }
 }
